@@ -1,4 +1,4 @@
-teiid-dashboard-builder
+teiid-dashboard
 =======================
 
-Dashboard builder
+Teiid Dashboard
