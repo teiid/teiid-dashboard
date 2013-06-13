@@ -2,13 +2,13 @@ Teiid Dashboard Builder
 =======================
 
 Teiid Dashboard Builder is a web application for the visual composition of dashboards. A dashboard is composed by a set of
- business indicators (aka Key Performance Indicators) which feed from data coming from Teiid virtual databases.
+ business indicators (aka Key Performance Indicators) which are feed from data coming from Teiid virtual databases.
 
 The project itself is a customization of the [Dashboard Builder](https://github.com/droolsjbpm/dashboard-builder) project.
 This customization has the following goals in mind:
 
 * To replace the whole tooling look&feel with Teiid's branding.
-* To provide users with a set out-of-the-box sample dashboards to demonstrate how to exploit data coming from Teiid vistual databases.
+* To provide users with a set of out-of-the-box sample dashboards to demonstrate how to exploit data coming from Teiid virtual databases.
 * To offer a tight integration at the data connectivity layer between Dashbuilder and Teiid.
 
 If you discover pitfalls, tips and tricks not described in this document,
@@ -47,9 +47,9 @@ If you want to build the project and execute a quick demo, please, proceed as in
         $ sh start-demo.sh
 
   NOTE: The application uses an auto-deployable embedded H2 database which it's automatically created when you start
-  the app for the very first time. The database initialization procedure it takes a few minutes. Furthermore, you should
+  the app for the very first time. The database initialization procedure takes a few minutes. Furthermore, you should
   take into account that the H2 database downgrades the application performance compared with other databases like
-  PostgreSQL, MySQL, normally used in production environments.
+  PostgreSQL, MySQL, which are normally used in production environments.
 
 5. Once the application is started, open a browser and type the URL: <code>http://localhost:8080/teiid-dashboard</code>.
 The following user/password are available by default:
@@ -68,10 +68,10 @@ If you want to restore the application to its initial state you can:
 
 * Stop the application (if running).
 * Delete the database files in the <code>/db</code> directory.
-* Start the application.
+* Re-Start the application.
 
 JBoss Application Server
 -------------------------
 
-If you want to generate a distribution & deploy it onto the JBoss Application Server take a look at the
+If you want to generate a distribution & deploy it onto the JBoss Application Server, take a look at the
 following file [builder/README.md](https://github.com/teiid/teiid-dashboard/blob/master/builder/README.md).
