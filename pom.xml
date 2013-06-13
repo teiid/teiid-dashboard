@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2012 JBoss Inc
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.jboss.teiid.teiid-dashboard</groupId>
+    <artifactId>teiid-dashboard-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Dashboard Builder for Teiid Project</name>
+    <inceptionYear>2013</inceptionYear>
+
+    <properties>
+        <hyear>2013</hyear>
+        <version.weld.spi>1.1.Final</version.weld.spi>
+        <version.weld>1.1.13.Final</version.weld>
+        <version.jetty>8.1.7.v20120910</version.jetty>
+        <version.hibernate>4.2.0.Final</version.hibernate>
+        <version.dashbuilder>6.0.0-SNAPSHOT</version.dashbuilder>
+    </properties>
+
+    <scm>
+      <connection>scm:git:git@github.com:teiid/teiid-dashboard.git</connection>
+      <developerConnection>scm:git:git@github.com:teiid/teiid-dashboard.git</developerConnection>
+      <url>https://github.com/teiid/teiid-dashboard.git</url>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>jboss-public-repository-group</id>
+            <name>JBoss Public Repository Group</name>
+            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <modules>
+        <module>modules</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>fullProfile</id>
+            <activation>
+                <property>
+                    <name>full</name>
+                </property>
+            </activation>
+            <modules>
+                <module>builder</module>
+            </modules>
+        </profile>
+    </profiles>
+
+</project>
