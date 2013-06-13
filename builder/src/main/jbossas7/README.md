@@ -14,7 +14,7 @@ Open a terminal window, go to the root directory and execute the following Maven
 
 Go to the <code>builder/target</code> directory and get the file called **teiid-dashbuilder-jboss-as7.0.war**.
 
-Deploy KIE Contributors
+Deploy the war
 ----------------------------
 
 Get the proper WAR file (e.g. teiid-dashbuilder-jboss-as7.0.war) and execute the following command:
