@@ -35,17 +35,20 @@
             <groupId>org.jboss.dashboard-builder</groupId>
             <artifactId>dashboard-commons</artifactId>
             <version>${version.dashbuilder}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.dashboard-builder</groupId>
             <artifactId>dashboard-displayer-core</artifactId>
             <version>${version.dashbuilder}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.dashboard-builder</groupId>
             <artifactId>dashboard-ui-core</artifactId>
             <version>${version.dashbuilder}</version>
             <classifier>classes</classifier>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.dashboard-builder</groupId>
