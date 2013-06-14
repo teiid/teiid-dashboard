@@ -35,6 +35,7 @@
         <version.jetty>8.1.7.v20120910</version.jetty>
         <version.hibernate>4.2.0.Final</version.hibernate>
         <version.dashbuilder>6.0.0-SNAPSHOT</version.dashbuilder>
+        <version.teiid>8.5.0.Alpha1-SNAPSHOT</version.teiid>
     </properties>
 
     <scm>
@@ -63,6 +64,39 @@
     <modules>
         <module>modules</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jboss.teiid</groupId>
+            <artifactId>teiid-client</artifactId>
+            <version>${version.teiid}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.dashboard-builder</groupId>
+            <artifactId>dashboard-commons</artifactId>
+            <version>${version.dashbuilder}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.dashboard-builder</groupId>
+            <artifactId>dashboard-security</artifactId>
+            <version>${version.dashbuilder}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.dashboard-builder</groupId>
+            <artifactId>dashboard-displayer-core</artifactId>
+            <version>${version.dashbuilder}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.dashboard-builder</groupId>
+            <artifactId>dashboard-ui-core</artifactId>
+            <version>${version.dashbuilder}</version>
+            <classifier>classes</classifier>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
     <profiles>
         <profile>

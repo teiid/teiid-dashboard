@@ -30,14 +30,6 @@
     <packaging>jar</packaging>
     <name>Teiid Dashboard Builder Integration</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jboss.dashboard-builder</groupId>
-            <artifactId>dashboard-commons</artifactId>
-            <version>${version.dashbuilder}</version>
-        </dependency>
-    </dependencies>
-
 </project>
 
 
