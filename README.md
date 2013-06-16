@@ -2,14 +2,14 @@ Teiid Dashboard Builder
 =======================
 
 Teiid Dashboard Builder is a web application for the visual composition of dashboards. A dashboard is composed by a set of
- business indicators (aka Key Performance Indicators) which feed from data coming from Teiid virtual databases.
+ business indicators (aka Key Performance Indicators) which are feed from data coming from Teiid virtual databases.
 
 The project itself is a customization of the [Dashboard Builder](https://github.com/droolsjbpm/dashboard-builder) project.
 This customization has the following goals in mind:
 
 * To replace the whole tooling look&feel with Teiid's branding.
 * To provide users with a set of out-of-the-box sample dashboards to demonstrate how to exploit data coming from Teiid virtual databases.
-* To offer a tight integration at the data connectivity layer between Dashbuilder and Teiid.
+* To offer a tight integration between Dashbuilder and Teiid at the data connectivity layer.
 
 If you discover pitfalls, tips and tricks not described in this document,
 please update it using the [markdown syntax](http://daringfireball.net/projects/markdown/syntax).
