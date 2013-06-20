@@ -27,9 +27,11 @@ import javax.sql.DataSource;
 public class TeiidDataSourceManager extends DataSourceManager {
 
     public DataSource getDatasource(String name) throws Exception {
-        DataSource ds = super.getDatasource(name);
+        DataSource ds = super.getDataSource(name);
         if (ds == null) return null;
+        
+        return ds;
 
-        return new TeiidWrapperDataSource(ds);
+//        return new TeiidWrapperDataSource(ds);
     }
 }

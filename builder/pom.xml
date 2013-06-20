@@ -67,24 +67,49 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
                     <execution>
+                    	<id>demos</id>
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
                         </goals>
+		                <configuration>
+		                    <finalName>teiid-dashbuilder</finalName>
+		                    <descriptors>
+		                        <descriptor>src/main/assembly/assembly-demo.xml</descriptor>
+		                        <descriptor>src/main/assembly/assembly-demo-installer.xml</descriptor>
+		                    </descriptors>
+		                    <archive>
+		                        <addMavenDescriptor>false</addMavenDescriptor>
+		                    </archive>
+		                </configuration>
                     </execution>
+                     <execution>
+                    	<id>jbossas</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+		                <configuration>
+		                    <finalName>teiid-dashbuilder</finalName>
+		                    <descriptors>
+		                        <descriptor>src/main/assembly/assembly-jboss-as-7_0.xml</descriptor>
+		                    </descriptors>
+		                    <archive>
+	                 			<manifest>
+	    	                         <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+	 	                    	</manifest>
+	                        	<manifestEntries>
+	                            	<Dependencies>
+	                                org.jboss.teiid.client
+	                            	</Dependencies>
+	                        	</manifestEntries> 		                    
+                 			</archive>
+
+		                </configuration>                        
+                    </execution>                   
                 </executions>
-                <configuration>
-                    <finalName>teiid-dashbuilder</finalName>
-                    <descriptors>
-                        <descriptor>src/main/assembly/assembly-jboss-as-7_0.xml</descriptor>
-                        <descriptor>src/main/assembly/assembly-demo.xml</descriptor>
-                        <descriptor>src/main/assembly/assembly-demo-installer.xml</descriptor>
-                    </descriptors>
-                    <archive>
-                        <addMavenDescriptor>false</addMavenDescriptor>
-                    </archive>
-                </configuration>
-            </plugin>
+ 
+            </plugin>      
         </plugins>
     </build>
 
