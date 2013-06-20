@@ -37,6 +37,10 @@
             <unpack>true</unpack>
             <unpackOptions>
                 <excludes>
+                    <exclude>WEB-INF/lib/teiid-client-*.jar</exclude>
+                    <exclude>WEB-INF/lib/teiid-common-*.jar</exclude>
+                	<exclude>WEB-INF/lib/teiid-*jdbc*.jar</exclude>
+                
                     <exclude>WEB-INF/jetty-*.xml</exclude>
                     <exclude>WEB-INF/jboss-web.xml</exclude>
                     <exclude>WEB-INF/jboss-deployment-structure.xml</exclude>
@@ -56,7 +60,7 @@
                     <exclude>WEB-INF/lib/fontbox-*.jar</exclude>
                     <exclude>WEB-INF/lib/itext-*.jar</exclude>
                     <exclude>WEB-INF/lib/pdfbox-*.jar</exclude>
-                    <exclude>WEB-INF/lib/xml-apis-*.jar</exclude>
+                    <!-- >exclude>WEB-INF/lib/xml-apis-*.jar</exclude-->
                     <exclude>WEB-INF/lib/slf4j-api-*.jar</exclude>
                     <exclude>WEB-INF/lib/commons-lang-*.jar</exclude>
                     <exclude>WEB-INF/lib/commons-collections-*.jar</exclude>

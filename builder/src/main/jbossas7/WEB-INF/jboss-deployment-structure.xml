@@ -20,8 +20,8 @@
     <deployment>
 
         <dependencies>
+       		<module name="org.jboss.teiid.client"/>
             <module name="org.hibernate" />
-            <module name="org.dom4j" />
             <module name="org.jdom" />
             <module name="org.apache.commons.lang" />
             <module name="org.apache.commons.io" />

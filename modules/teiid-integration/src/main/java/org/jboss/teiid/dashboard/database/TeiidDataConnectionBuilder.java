@@ -15,16 +15,15 @@
  */
 package org.jboss.teiid.dashboard.database;
 
-import org.jboss.dashboard.CoreServices;
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import javax.sql.DataSource;
+
 import org.jboss.dashboard.annotation.Priority;
 import org.jboss.dashboard.annotation.Startable;
 import org.jboss.dashboard.database.DataSourceManager;
 import org.jboss.dashboard.database.JDBCDataSourceEntry;
 import org.teiid.jdbc.TeiidDriver;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.sql.DataSource;
 
 /**
  * Creates (if doesn't exist) a default Dashbuilder's data source connection against Teiid.
@@ -32,7 +31,7 @@ import javax.sql.DataSource;
 @ApplicationScoped
 public class TeiidDataConnectionBuilder implements Startable {
 
-    public static final String TEIID_DATA_SOURCE = "Teiid Local";
+    public static final String TEIID_DATA_SOURCE_EXAMPLE = "Portfolio";
 
     @Inject
     protected DataSourceManager dataSourceManager;
@@ -42,16 +41,24 @@ public class TeiidDataConnectionBuilder implements Startable {
     }
 
     public void start() throws Exception {
-        DataSource teiidDS = dataSourceManager.getDatasource(TEIID_DATA_SOURCE);
+        DataSource teiidDS = dataSourceManager.getDataSource(TEIID_DATA_SOURCE_EXAMPLE);
         if (teiidDS == null) {
             JDBCDataSourceEntry jdbcDS = new JDBCDataSourceEntry();
-            jdbcDS.setName(TEIID_DATA_SOURCE);
+            jdbcDS.setName(TEIID_DATA_SOURCE_EXAMPLE);
             jdbcDS.setDriverClass(TeiidDriver.class.getName());
-            jdbcDS.setUrl("jdbc:teiid:localhost ");
-            jdbcDS.setUserName("teiid");
-            jdbcDS.setPassword("teiid");
-            jdbcDS.setTestQuery("SELECT 1");
-            jdbcDS.save();
+            jdbcDS.setUrl("jdbc:teiid:Portfolio");
+            jdbcDS.setUserName("user");
+            jdbcDS.setPassword("user");
+
+//        	
+//        	
+//            JNDIDataSourceEntry jdbcDS = new JNDIDataSourceEntry();
+//            jdbcDS.setName(TEIID_DATA_SOURCE_EXAMPLE);
+//            jdbcDS.setJndiPath("java:/Portfolio");
+//            jdbcDS.setUserName("user");
+//            jdbcDS.setPassword("user");
+//            jdbcDS.setTestQuery("SELECT 1");
+//            jdbcDS.save();
         }
     }
 }
