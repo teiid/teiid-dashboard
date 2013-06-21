@@ -26,8 +26,8 @@ Get the proper WAR file (e.g. teiid-dashbuilder-jboss-as7.0.war) and execute the
     e.g. $ ./jboss-cli.sh --connect --command="deploy /home/myuser/myfiles/teiid-dashbuilder-jboss-as7.0.war" )
 
 
-The application is configured to use a datasource with the following JNDI name: <code>java:jboss/datasources/ExampleDS</code>.
-Notice, this datasource is intended for development/demo purposes and it's present by default at any JBoss installation.
+The application is configured to use this datasource, with the following JNDI name: <code>java:jboss/datasources/ExampleDS</code>, 
+as its workspace persistence.  Notice, this datasource is intended for development/demo purposes and it's present by default at any JBoss installation.
 
 If you want to deploy on a database different from H2 like Oracle, MySQL, Postgres or MS SQL Server please follow the next steps:
 
@@ -42,7 +42,7 @@ If you want to deploy on a database different from H2 like Oracle, MySQL, Postgr
            <resource-ref>
                <res-ref-name>jdbc/teiid-dashboard</res-ref-name>
                <res-type>javax.sql.DataSource</res-type>
-               <jndi-name>java:jboss/datasources/myDataSource</jndi-name>
+               <jndi-name>java:jboss/datasources/ExampleDS</jndi-name>
            </resource-ref>
            ...
 
@@ -62,6 +62,10 @@ After that, your are ready to generate a WAR distribution prepared for the targe
 User Authentication
 --------------------------
 
+NOTE:  The security domain is set to teiid-security, which is the same security domain that Teiid defaults to.
+       Therefore, any user setup (i.e., add/update/delete) will need to done to this domain.
+    
+
 Once started, open a browser and type the following URL:
 <code>http://localhost:8080/teiid-dashboard</code>. A login screen should be displayed.
 
@@ -70,15 +74,17 @@ However, some extra configuration is needed before you can sign in:
 * The application is based on the J2EE container managed authentication  mechanism.
 This means that the login itself is delegated to the application server.
 
-* First of all, in order to login as superuser, using the <code>[jboss-as7]/bin/adduser</code> command utility,
-you must create a user with login=<code>root</code> and role=<whatever role has been defined in the web.xml file>.
-This is just for container authentication purposes, as the root user's application privileges are not role-linked,
-but instead is granted with all permissions).
+* First of all, in order to login as superuser, you must create a user with login=<code>root</code> and 
+role=<whatever role has been defined in the web.xml file>. This is just for container authentication purposes, as 
+the root user's application privileges are not role-linked, but instead is granted with all permissions).
 
 * The application roles are defined at [builder/src/main/jbossas7/WEB-INF/web.xml](https://github.com/teiid/teiid-dashboard/blob/master/builder/src/main/jbossas7/WEB-INF/web.xml) file.
 Roles can be used to create access profiles and define custom authorization policies.
 
-* The application uses the JBoss' default security domain as you can see [here](https://github.com/teiid/teiid-dashboard/blob/master/builder/src/main/jbossas7/WEB-INF/jboss-web.xml).
+NOTE: these roles are not the same roles defined in the teiid-security domain.  Even though some maybe named the same, 
+there's no implied cross over in access permissions.
+
+* The application uses Teiids' default security domain (e.g., teiid-security) as you can see [here](https://github.com/teiid/teiid-dashboard/blob/master/builder/src/main/jbossas7/WEB-INF/jboss-web.xml).
 Alternatively, you can define your own security domain and use, for instance, an LDAP, a database, or whatever mechanism you want to use as your credential storage.
 There are plenty of examples in the JBoss AS documentation about.
 
