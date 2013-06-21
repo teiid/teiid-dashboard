@@ -32,15 +32,16 @@ import org.teiid.jdbc.TeiidDriver;
 public class TeiidDataConnectionBuilder implements Startable {
 
     public static final String TEIID_DATA_SOURCE_EXAMPLE = "Portfolio";
-
+    
     @Inject
     protected DataSourceManager dataSourceManager;
 
     public Priority getPriority() {
         return Priority.LOW;
     }
-
+    
     public void start() throws Exception {
+    	
         DataSource teiidDS = dataSourceManager.getDataSource(TEIID_DATA_SOURCE_EXAMPLE);
         if (teiidDS == null) {
             JDBCDataSourceEntry jdbcDS = new JDBCDataSourceEntry();
@@ -49,6 +50,7 @@ public class TeiidDataConnectionBuilder implements Startable {
             jdbcDS.setUrl("jdbc:teiid:Portfolio");
             jdbcDS.setUserName("user");
             jdbcDS.setPassword("user");
+            jdbcDS.save();
 
 //        	
 //        	
