@@ -14,10 +14,11 @@ This customization has the following goals in mind:
 If you discover pitfalls, tips and tricks not described in this document,
 please update it using the [markdown syntax](http://daringfireball.net/projects/markdown/syntax).
 
-Quickstart
--------------------
 
-If you want to build the project and execute a quick demo, please, proceed as indicated:
+Building the project
+--------------------
+
+If you want to build the project please, proceed as indicated:
 
 1. Prerequisites:
 
@@ -31,7 +32,13 @@ If you want to build the project and execute a quick demo, please, proceed as in
   This command compiles, builds and runs the application. It'll last a few minutes (but only for the first time) because
   the maven build process needs to download a lot of third-party libraries.
 
-3. Go to the <code>builder/target</code> directory and unzip the teiid-dashbuilder-demo-installer.zip file to
+
+Quickstart
+-------------------
+
+To execute a quick demo, first see "Building the project", the proceed as indicated:
+
+1. Go to the <code>builder/target</code> directory and unzip the teiid-dashbuilder-demo-installer.zip file to
   a given directory (the [target_directory]). You should get a directory structure like this:
 
          [target_directory]/teiid-dashboard-demo
@@ -41,7 +48,7 @@ If you want to build the project and execute a quick demo, please, proceed as in
                               /db
                               /log
 
-4. Open a command window and execute the <code>start-demo.sh</code> script:
+2. Open a command window and execute the <code>start-demo.sh</code> script:
 
         $ cd [target_directory]/teiid-dashbuilder-demo
         $ sh start-demo.sh
@@ -51,7 +58,7 @@ If you want to build the project and execute a quick demo, please, proceed as in
   take into account that the H2 database downgrades the application performance compared with other databases like
   PostgreSQL, MySQL, which are normally used in production environments.
 
-5. Once the application is started, open a browser and type the URL: <code>http://localhost:8080/teiid-dashboard</code>.
+3. Once the application is started, open a browser and type the URL: <code>http://localhost:8080/teiid-dashboard</code>.
 The following user/password are available by default:
 
      <code>root/root</code>: to sign-in as the superuser     
@@ -61,7 +68,7 @@ The following user/password are available by default:
 
   To stop the application close the terminal window or type the "Ctrl + C" command.
 
-6. Application database
+4. Application database
 
 The application database will be generated automatically when you start the application for the first time.
 If you want to restore the application to its initial state you can:
@@ -73,5 +80,10 @@ If you want to restore the application to its initial state you can:
 JBoss Application Server
 -------------------------
 
-If you want to generate a distribution & deploy it onto the JBoss Application Server, take a look at the
-following file [builder/README.md](https://github.com/teiid/teiid-dashboard/blob/master/builder/README.md).
+To deploy the dashbuilder war to a JBoss Application Server, first see "Building the project", the proceed as indicated:
+
+1.  Go to the <code>builder/target</code> directory and find the teiid-dashbuilder-jboss-as7.0.war
+
+2.  Now take a look at the following file [builder/README.md](https://github.com/teiid/teiid-dashboard/blob/master/builder/README.md).
+
+
