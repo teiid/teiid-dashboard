@@ -33,7 +33,7 @@ If you want to build the project please, proceed as indicated:
   the maven build process needs to download a lot of third-party libraries.
 
 
-Quickstart
+Quickstart Demo
 -------------------
 
 To execute a quick demo, first see "Building the project", the proceed as indicated:
