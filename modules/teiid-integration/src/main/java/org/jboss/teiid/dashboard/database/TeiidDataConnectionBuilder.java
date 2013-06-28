@@ -21,12 +21,8 @@ import javax.sql.DataSource;
 
 import org.jboss.dashboard.annotation.Priority;
 import org.jboss.dashboard.annotation.Startable;
-import org.jboss.dashboard.annotation.config.Config;
 import org.jboss.dashboard.database.DataSourceManager;
 import org.jboss.dashboard.database.JDBCDataSourceEntry;
-import org.jboss.dashboard.factory.InitialModuleRegistry;
-import org.jboss.dashboard.kpi.KPIInitialModule;
-import org.jboss.dashboard.workspace.export.ImportWorkspacesModule;
 import org.teiid.jdbc.TeiidDriver;
 
 /**
@@ -36,30 +32,16 @@ import org.teiid.jdbc.TeiidDriver;
 public class TeiidDataConnectionBuilder implements Startable {
 
     public static final String TEIID_DATA_SOURCE_EXAMPLE = "Portfolio";
-    
+
     @Inject
     protected DataSourceManager dataSourceManager;
-
-    @Inject
-    private InitialModuleRegistry initialModuleRegistry;
-
-    @Inject @Config("WEB-INF/etc/appdata/initialData/MySampleKPIs.xml")
-    private String kpiFile;
-
-    @Inject @Config("WEB-INF/etc/appdata/initialData/MySampleWorkspace.xml")
-    private String workspaceFile;
 
     public Priority getPriority() {
         return Priority.LOW;
     }
 
     public void start() throws Exception {
-        checkAndCreateDExternalDatasources();
-        registerKpisToDeploy();
-        registerWorkspacesToDeploy();
-    }
 
-    protected void checkAndCreateDExternalDatasources() throws Exception {
         DataSource teiidDS = dataSourceManager.getDataSource(TEIID_DATA_SOURCE_EXAMPLE);
         if (teiidDS == null) {
             JDBCDataSourceEntry jdbcDS = new JDBCDataSourceEntry();
@@ -69,22 +51,16 @@ public class TeiidDataConnectionBuilder implements Startable {
             jdbcDS.setUserName("user");
             jdbcDS.setPassword("user");
             jdbcDS.save();
+
+//        	
+//        	
+//            JNDIDataSourceEntry jdbcDS = new JNDIDataSourceEntry();
+//            jdbcDS.setName(TEIID_DATA_SOURCE_EXAMPLE);
+//            jdbcDS.setJndiPath("java:/Portfolio");
+//            jdbcDS.setUserName("user");
+//            jdbcDS.setPassword("user");
+//            jdbcDS.setTestQuery("SELECT 1");
+//            jdbcDS.save();
         }
-    }
-
-    protected void registerWorkspacesToDeploy() throws Exception {
-        ImportWorkspacesModule workspace = new ImportWorkspacesModule();
-        workspace.setName("org.jboss.teiid.dashboard.mysample.Workspace");
-        workspace.setImportFile(workspaceFile);
-        workspace.setVersion(1);
-        initialModuleRegistry.registerInitialModule(workspace);
-    }
-
-    protected void registerKpisToDeploy() throws Exception {
-        KPIInitialModule kpis = new KPIInitialModule();
-        kpis.setName("org.jboss.teiid.dashboard.mysample.KPIs");
-        kpis.setImportFile(kpiFile);
-        kpis.setVersion(1);
-        initialModuleRegistry.registerInitialModule(kpis);
     }
 }
