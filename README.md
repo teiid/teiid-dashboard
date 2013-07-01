@@ -80,6 +80,11 @@ If you want to restore the application to its initial state you can:
 JBoss Application Server
 -------------------------
 
+Prerequisite:   It's assume Teiid will be deployed to the same JBoss Application Server that the dashbuilder war will be deployed.
+                If you wish to use only the Teiid JDBD driver to access remote Teiid servers, you will need to add the
+                Teiid JDBD driver to the war or make sure its in the classpath to be picked up by the war.
+
+
 To deploy the dashbuilder war to a JBoss Application Server, first see "Building the project", the proceed as indicated:
 
 1.  Go to the <code>builder/target</code> directory and find the teiid-dashbuilder-jboss-as7.0.war
