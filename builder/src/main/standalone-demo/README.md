@@ -42,7 +42,6 @@ Installation steps
                               start-demo.sh
                               realm.properties
                               /db
-                              /log
 
 * Open a command window and execute the start-demo.sh script (for linux environments)
 
