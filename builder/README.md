@@ -11,7 +11,7 @@ type the following command:
 
 Currently, the following artifacts are generated:
 
-* **teiid-dashbuilder-jboss-as7.0.war:**  Product distribution for JBoss EAP 6.1 and JBoss AS 7.1 servers.
+* **teiid-dashbuilder-jboss-as7.war:**  Product distribution for JBoss EAP 6.1 and JBoss AS 7.1 servers.
 
   By the default the distribution is configured to use H2 hibernate dialect but database drivers aren't packaged with the distribution.
 

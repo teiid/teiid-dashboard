@@ -87,7 +87,7 @@ Prerequisite:   It's assume Teiid will be deployed to the same JBoss Application
 
 To deploy the dashbuilder war to a JBoss Application Server, first see "Building the project", the proceed as indicated:
 
-1.  Go to the <code>builder/target</code> directory and find the teiid-dashbuilder-jboss-as7.0.war
+1.  Go to the <code>builder/target</code> directory and find the teiid-dashbuilder-jboss-as7.war
 
 2.  Now take a look at the following file [builder/README.md](https://github.com/teiid/teiid-dashboard/blob/master/builder/README.md).
 
