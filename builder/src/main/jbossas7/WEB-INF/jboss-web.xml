@@ -21,7 +21,7 @@
     <resource-ref>
         <res-ref-name>jdbc/teiid-dashboard</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
-        <jndi-name>java:jboss/datasources/ExampleDS</jndi-name>
+        <jndi-name>java:jboss/datasources/DashboardDS</jndi-name>
     </resource-ref>
 
     <!--
