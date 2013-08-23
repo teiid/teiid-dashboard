@@ -20,14 +20,21 @@ Deploy the war
 Get the proper WAR file (e.g. teiid-dashbuilder-jboss-as7.war) and execute the following command:
 
     $ cd <jboss_home>/bin
-    $ ./jboss-cli.sh --connect --command="deploy <path_to_war_file>"
+    $ ./jboss-cli.sh --connect command="deploy <path_to_war_file>"
 
     <path_to_war_file>: is the local path to the application war file.
     e.g. $ ./jboss-cli.sh --connect --command="deploy /home/myuser/myfiles/teiid-dashbuilder-jboss-as7.war" )
 
+To setup the H2 datasource so that your dashboard additions/changes will be persisted and available on server restart, 
+run the CLI script: builder/src/main/scripts/add_datasource.cli.  Execute the following:
 
-The application is configured to use this datasource, with the following JNDI name: <code>java:jboss/datasources/ExampleDS</code>, 
-as its workspace persistence.  Notice, this datasource is intended for development/demo purposes and it's present by default at any JBoss installation.
+    $ cd <jboss_home>/bin
+    $ ./jboss-cli.sh --connect file="<path_to_cli_script_file>"
+
+The application is configured to to look for following JNDI name: <code>java:jboss/datasources/DashboardDS</code>.  If
+the datasource does not exist, the dashboard builder will just operate in in-memory mode.
+
+Notice, this datasource is intended for development/demo purposes and it's present by default at any JBoss installation.
 
 If you want to deploy on a database different from H2 like Oracle, MySQL, Postgres or MS SQL Server please follow the next steps:
 
@@ -42,7 +49,7 @@ If you want to deploy on a database different from H2 like Oracle, MySQL, Postgr
            <resource-ref>
                <res-ref-name>jdbc/teiid-dashboard</res-ref-name>
                <res-type>javax.sql.DataSource</res-type>
-               <jndi-name>java:jboss/datasources/ExampleDS</jndi-name>
+               <jndi-name>java:jboss/datasources/DashboardDS</jndi-name>
            </resource-ref>
            ...
 
