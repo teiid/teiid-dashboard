@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jboss.teiid.teiid-dashboard</groupId>
+        <artifactId>teiid-dashboard-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>teiid-dashboard-distribution-builder</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Teiid Dashboard Distribution Builder</name>
+    <description>This module builds the distribution wars for different application servers and the standalone demo as well.</description>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.jboss.teiid.teiid-dashboard</groupId>
+            <artifactId>teiid-dashboard-showcase</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+
+        <!-- Dependencies for the demo-installer.zip -->
+
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty-runner</artifactId>
+            <version>${version.jetty}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.3.168</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld</groupId>
+            <artifactId>weld-spi</artifactId>
+            <version>${version.weld.spi}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld</groupId>
+            <artifactId>weld-core</artifactId>
+            <version>${version.weld}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld.se</groupId>
+            <artifactId>weld-se-core</artifactId>
+            <version>${version.weld}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld.servlet</groupId>
+            <artifactId>weld-servlet</artifactId>
+            <version>${version.weld}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                    	<id>demos</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+		                <configuration>
+		                    <finalName>teiid-dashbuilder</finalName>
+		                    <descriptors>
+		                        <descriptor>src/main/assembly/assembly-demo.xml</descriptor>
+		                        <descriptor>src/main/assembly/assembly-demo-installer.xml</descriptor>
+		                    </descriptors>
+		                    <archive>
+		                        <addMavenDescriptor>false</addMavenDescriptor>
+		                    </archive>
+		                </configuration>
+                    </execution>
+                     <execution>
+                    	<id>jbossas</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+		                <configuration>
+		                    <finalName>teiid-dashbuilder</finalName>
+		                    <descriptors>
+		                        <descriptor>src/main/assembly/assembly-jboss-as-7.xml</descriptor>
+		                    </descriptors>
+		                    <archive>
+	                 			<manifest>
+	    	                         <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+	 	                    	</manifest>
+	                        	<manifestEntries>
+	                            	<Dependencies>
+	                                org.jboss.teiid.client
+	                            	</Dependencies>
+	                        	</manifestEntries> 		                    
+                 			</archive>
+
+		                </configuration>                        
+                    </execution>                   
+                </executions>
+ 
+            </plugin>      
+        </plugins>
+    </build>
+
+</project>
