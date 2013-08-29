@@ -15,151 +15,46 @@
  */
 package org.jboss.teiid.dashboard;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-
 import org.jboss.dashboard.annotation.Priority;
 import org.jboss.dashboard.annotation.Startable;
 import org.jboss.dashboard.annotation.config.Config;
-import org.jboss.dashboard.export.ImportResults;
 import org.jboss.dashboard.factory.InitialModuleRegistry;
-//import org.jboss.dashboard.kpi.KPI;
-import org.jboss.dashboard.kpi.TeiidKPIInitialModule;
-import org.jboss.dashboard.provider.DataProvider;
-import org.jboss.dashboard.workspace.export.TeiidImportWorkspacesModule;
+import org.jboss.dashboard.kpi.KPIInitialModule;
+import org.jboss.dashboard.workspace.export.ImportWorkspacesModule;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 
 /**
  * Class that builds the Teiid Dashboard Builder's showcase on startup.
  */
 @ApplicationScoped
 public class TeiidShowcaseBuilder implements Startable {
-	
-    /** Logger */
-    private static transient org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog(TeiidShowcaseBuilder.class.getName());
-
-	
-	private static final String JBOSS_BASE_DIR = "jboss.server.base.dir";
-	private static final String TEIID_DASHBUILDER_DIR = "../dataServices/teiidDashbuilder";
-	
-//	public static final String KPI_DIRECTORY = "dashboard.kpi.directory";
-//	public static final String WORKSPACE_DIRECTORY = "dashboard.workspace.directory";
 
     @Inject
     private InitialModuleRegistry initialModuleRegistry;
 
-    @Inject @Config("WEB-INF/etc/appdata/initialData/teiidShowcaseKPIs.xml")
+    @Inject @Config("WEB-INF/etc/appdata/initialData/showcaseKPIs.xml")
     private String kpiFile;
 
-    @Inject @Config("WEB-INF/etc/appdata/initialData/teiidShowcaseWorkspace.xml")
+    @Inject @Config("WEB-INF/etc/appdata/initialData/showcaseWorkspace.xml")
     private String workspaceFile;
-    
-    
-    private String jbossServerBaseDir = System.getProperty(JBOSS_BASE_DIR);
-    
 
     public Priority getPriority() {
         return Priority.NORMAL;
     }
 
     public void start() throws Exception {
-    	boolean loadedKPIFiles = false;
-    	boolean loadedWorkspaceFiles = false;
-    
-    	
-//    	loadWorkspace(workspaceFile, "org.jboss.teiid.dashboard.showcase.Workspace"); 
-    	loadKPI(kpiFile, "org.jboss.teiid.dashboard.showcase.KPIs");
-    	
-		if (jbossServerBaseDir != null) {
-    		String kpiPath = jbossServerBaseDir + File.separator + TEIID_DASHBUILDER_DIR + File.separator + "kpiFiles";		
-    		
-    		File pkiFile = new File(kpiPath);
-    		if (pkiFile.exists()) {
-    			List<File> files = this.getFilesInDirectory(pkiFile, "xml");
-    	        if (files != null && ! files.isEmpty()) {
-    	        	loadedKPIFiles = true;
-    	        	for (File f : files ) {
-    	        		
-    	        		loadKPI(f.getAbsolutePath(), "org.jboss.teiid.dashboard.showcase.KPI." + f.getName());
-    	        	}
-    	        } else {
-    	        	log.info("The directory " + kpiPath + " does not contain any KPI files.");
-    	        }
-    			
-    		}
-    		
-//    		if (!loadedKPIFiles) {
-//    			loadKPI(kpiFile, "org.jboss.teiid.dashboard.showcase.KPIs");
-//    		}
-    		
-    		
-    		String wsPath = jbossServerBaseDir + File.separator + TEIID_DASHBUILDER_DIR + File.separator + "workspaceFiles";		
-    		
-    		File wsFile = new File(wsPath);
-    		if (wsFile.exists()) {
-    			List<File> files = this.getFilesInDirectory(wsFile, "cex");
-    	        if (files != null && ! files.isEmpty()) {
-    	        	loadedWorkspaceFiles = true;
-    	        	for (File f : files ) {
-    	        		loadWorkspace(f.getAbsolutePath(), "org.jboss.teiid.dashboard.showcase.Workspace." + f.getName());
-    	        	}
-    	        } else {
-    	        	log.info("The directory " + wsPath + " does not contain any Workspace files.");
-    	        }
-    			
-    		}
-    		if (!loadedWorkspaceFiles) {
-    			loadWorkspace(workspaceFile, "org.jboss.teiid.dashboard.showcase.Workspace");   			
-    		}
-    	}
-		
-		
-    }
-    
-    private void loadKPI(String path, String name) {
-        TeiidKPIInitialModule kpis = new TeiidKPIInitialModule();
-        kpis.setName(name);
-        kpis.setImportFile(path);
+        KPIInitialModule kpis = new KPIInitialModule();
+        kpis.setName("org.jboss.teiid.dashboard.showcase.KPIs");
+        kpis.setImportFile(kpiFile);
         kpis.setVersion(1);
         initialModuleRegistry.registerInitialModule(kpis);
-        
-        log.info("Loaded KPI file " + path + " into dashboard.");
-    }
-    
-    private void loadWorkspace(String path, String name) {
-        TeiidImportWorkspacesModule workspace = new TeiidImportWorkspacesModule();
-        workspace.setName(name);
-        workspace.setImportFile(path);
+
+        ImportWorkspacesModule workspace = new ImportWorkspacesModule();
+        workspace.setName("org.jboss.teiid.dashboard.showcase.Workspace");
+        workspace.setImportFile(workspaceFile);
         workspace.setVersion(1);
         initialModuleRegistry.registerInitialModule(workspace);
-        
-        log.info("Loaded Workspace file " + path + " into dashboard.");
-	
     }
-        
-	    private List<File> getFilesInDirectory(File path, String ext) {
-	    		    
-	        if (!path.exists()) {
-	            log.error("The directory " + path+ " does not exist.");
-	            return null;
-	        }
-	        List<File> files = new ArrayList<File>();
-	        if (path.isDirectory()) {
-	        	   
-		        File[] sourceFiles = path.listFiles();
-		        for (int i = 0; i < sourceFiles.length; i++) {
-		            File srcFile = sourceFiles[i];
-		            if (!srcFile.isDirectory() && srcFile.getName().endsWith(ext)) {
-		            		files.add(srcFile);
-		            }
-		        }
-		               
-	        } 
-	        return files;
-
-	    }
 }
