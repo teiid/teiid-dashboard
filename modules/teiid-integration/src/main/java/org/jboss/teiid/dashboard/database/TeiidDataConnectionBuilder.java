@@ -42,15 +42,15 @@ public class TeiidDataConnectionBuilder implements Startable {
 
     public void start() throws Exception {
 
-        DataSource teiidDS = dataSourceManager.getDataSource(TEIID_DATA_SOURCE_EXAMPLE);
-        if (teiidDS == null) {
-            JDBCDataSourceEntry jdbcDS = new JDBCDataSourceEntry();
-            jdbcDS.setName(TEIID_DATA_SOURCE_EXAMPLE);
-            jdbcDS.setDriverClass(TeiidDriver.class.getName());
-            jdbcDS.setUrl("jdbc:teiid:Portfolio");
-            jdbcDS.setUserName("user");
-            jdbcDS.setPassword("user");
-            jdbcDS.save();
+//        DataSource teiidDS = dataSourceManager.getDataSource(TEIID_DATA_SOURCE_EXAMPLE);
+//        if (teiidDS == null) {
+//            JDBCDataSourceEntry jdbcDS = new JDBCDataSourceEntry();
+//            jdbcDS.setName(TEIID_DATA_SOURCE_EXAMPLE);
+//            jdbcDS.setDriverClass(TeiidDriver.class.getName());
+//            jdbcDS.setUrl("jdbc:teiid:Portfolio");
+//            jdbcDS.setUserName("user");
+//            jdbcDS.setPassword("user");
+//            jdbcDS.save();
 
 //        	
 //        	
@@ -61,6 +61,6 @@ public class TeiidDataConnectionBuilder implements Startable {
 //            jdbcDS.setPassword("user");
 //            jdbcDS.setTestQuery("SELECT 1");
 //            jdbcDS.save();
-        }
+//        }
     }
 }
