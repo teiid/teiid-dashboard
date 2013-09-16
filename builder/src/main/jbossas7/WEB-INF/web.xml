@@ -18,6 +18,7 @@
 <web-app metadata-complete="false">
 
     <display-name>dashboard</display-name>
+
     <description>Dashboard-Builder Application</description>
 
     <!-- Security configuration -->
