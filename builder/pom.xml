@@ -9,10 +9,10 @@
         <version>2.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>teiid-dashboard-distribution-builder</artifactId>
+    <artifactId>teiid-dashboard-builder</artifactId>
     <packaging>pom</packaging>
 
-    <name>Teiid Dashboard Distribution Builder</name>
+    <name>Teiid Dashboard Builder</name>
     <description>This module builds the distribution wars for different application servers and the standalone demo as well.</description>
 
     <dependencies>
