@@ -4,15 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.jboss.teiid.teiid-dashboard</groupId>
-        <artifactId>teiid-dashboard-parent</artifactId>
+        <groupId>org.jboss.teiid.dashboard</groupId>
+        <artifactId>teiid-dashboard</artifactId>
         <version>2.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>teiid-dashboard-builder</artifactId>
     <packaging>pom</packaging>
 
-    <name>Teiid Dashboard Builder</name>
+    <name>Teiid Dashboard Builder Distribution</name>
     <description>This module builds the distribution wars for different application servers and the standalone demo as well.</description>
 
     <dependencies>
