@@ -31,7 +31,7 @@
     <dependencySets>
         <dependencySet>
             <includes>
-                <include>org.jboss.teiid.teiid-dashboard:teiid-dashboard-showcase:war</include>
+                <include>org.jboss.teiid.dashboard:teiid-dashboard-showcase:war</include>
             </includes>
             <outputDirectory>.</outputDirectory>
             <unpack>true</unpack>
