@@ -31,7 +31,7 @@
     <name>Teiid Dashboard Builder Modules</name>
 
     <modules>
-        <module>teiid-integration</module>
+        <!--module>teiid-integration</module-->
         <module>teiid-showcase</module>
     </modules>
 

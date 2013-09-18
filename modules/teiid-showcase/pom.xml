@@ -31,11 +31,16 @@
     <name>Teiid Dashboard Builder Showcase</name>
 
     <dependencies>
-        <dependency>
+        <!--dependency>
             <groupId>org.jboss.teiid.teiid-dashboard</groupId>
             <artifactId>teiid-dashboard-integration</artifactId>
             <version>${project.version}</version>
-        </dependency>
+        </dependency-->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>${version.dom4j}</version>
+        </dependency>        
         <dependency>
             <groupId>org.jboss.dashboard-builder</groupId>
             <artifactId>dashboard-webapp</artifactId>
