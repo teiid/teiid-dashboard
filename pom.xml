@@ -112,6 +112,11 @@
             <artifactId>teiid-client</artifactId>
             <version>${version.teiid}</version>
         </dependency>
+                <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1-redhat-5</version>
+        </dependency>
         <dependency>
             <groupId>dom4j</groupId>
             <artifactId>dom4j</artifactId>
