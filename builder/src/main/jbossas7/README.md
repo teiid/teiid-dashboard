@@ -26,14 +26,15 @@ Get the proper WAR file (e.g. teiid-dashbuilder-jboss-as7.war) and execute the f
     e.g. $ ./jboss-cli.sh --connect --command="deploy /home/myuser/myfiles/teiid-dashbuilder-jboss-as7.war" )
 
 To setup the H2 datasource so that your dashboard additions/changes will be persisted and available on server restart, 
-run the CLI script: builder/src/main/scripts/teiid-dashboard-add_datasource.cli.  Execute the following:
+run the CLI script: builder/src/main/scripts/add_datasource.cli.  Execute the following:
 
     $ cd <jboss_home>/bin
     $ ./jboss-cli.sh --connect file="<path_to_cli_script_file>"
 
-The application is configured to to look for following JNDI name: <code>java:jboss/datasources/DashboardDS</code>.  
+The application is configured to to look for following JNDI name: <code>java:jboss/datasources/DashboardDS</code>.  If
+the datasource does not exist, the dashboard builder will just operate in in-memory mode.
 
-Notice, this datasource is intended for development/demo purposes and it's present by default in any JBoss installation.
+Notice, this datasource is intended for development/demo purposes and it's present by default at any JBoss installation.
 
 If you want to deploy on a database different from H2 like Oracle, MySQL, Postgres or MS SQL Server please follow the next steps:
 
@@ -44,9 +45,9 @@ If you want to deploy on a database different from H2 like Oracle, MySQL, Postgr
 * Modify the file *teiid-dashboard/builder/src/main/jbossas7/WEB-INF/jboss-web.xml*:
 
         <jboss-web>
-           <context-root>/dashboard</context-root>
+           <context-root>/teiid-dashboard</context-root>
            <resource-ref>
-               <res-ref-name>jdbc/dashbuilder</res-ref-name>
+               <res-ref-name>jdbc/teiid-dashboard</res-ref-name>
                <res-type>javax.sql.DataSource</res-type>
                <jndi-name>java:jboss/datasources/DashboardDS</jndi-name>
            </resource-ref>
@@ -68,8 +69,8 @@ After that, your are ready to generate a WAR distribution prepared for the targe
 User Authentication
 --------------------------
 
-NOTE:  The security domain is set to *teiid-security*, which is the same security domain that Teiid defaults to.
-       Therefore, any user setup (i.e., add/update/delete) will need to done to this domain.  
+NOTE:  The security domain is set to teiid-security, which is the same security domain that Teiid defaults to.
+       Therefore, any user setup (i.e., add/update/delete) will need to done to this domain.
     
 
 Once started, open a browser and type the following URL:
@@ -81,7 +82,7 @@ However, some extra configuration is needed before you can sign in:
 This means that the login itself is delegated to the application server.
 
 * First of all, in order to login as superuser, you must create a user with login=<code>root</code> and 
-role={whatever role has been defined in the web.xml file}. This is just for container authentication purposes, as 
+role=<whatever role has been defined in the web.xml file>. This is just for container authentication purposes, as 
 the root user's application privileges are not role-linked, but instead is granted with all permissions).
 
 * The application roles are defined at [builder/src/main/jbossas7/WEB-INF/web.xml](https://github.com/teiid/teiid-dashboard/blob/master/builder/src/main/jbossas7/WEB-INF/web.xml) file.
