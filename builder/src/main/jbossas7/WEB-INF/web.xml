@@ -18,8 +18,8 @@
 <web-app metadata-complete="false">
 
     <display-name>dashboard</display-name>
-    <description>Dashboard-Builder Application</description>
 
+    <description>Dashboard-Builder Application</description>
 
     <!-- Security configuration -->
 
@@ -36,7 +36,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>Free access</web-resource-name>
-            <url-pattern>/images/jb_logo.png</url-pattern>
+            <url-pattern>/redhat/*</url-pattern>
         </web-resource-collection>
     </security-constraint>
 
