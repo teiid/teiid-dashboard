@@ -11,8 +11,7 @@
 
     <artifactId>teiid-dashboard-builder</artifactId>
     <packaging>pom</packaging>
-
-    <name>Teiid Dashboard Builder Distribution</name>
+    <name>Teiid Dashboard Builder</name>
     <description>This module builds the distribution wars for different application servers and the standalone demo as well.</description>
 
     <dependencies>
