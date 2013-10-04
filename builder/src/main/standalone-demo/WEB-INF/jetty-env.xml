@@ -19,9 +19,9 @@
 <!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
 
 
-<Configure id="teiid-dashboard" class="org.eclipse.jetty.webapp.WebAppContext">
+<Configure id="dashbuilder" class="org.eclipse.jetty.webapp.WebAppContext">
 
-    <Set name="contextPath">/teiid-dashboard</Set>
+    <Set name="contextPath">/dashboard</Set>
 
     <Get name="securityHandler">
         <Set name="loginService">
@@ -34,7 +34,7 @@
 
     <New id="BeanManager" class="org.eclipse.jetty.plus.jndi.Resource">
         <Arg>
-            <Ref id="teiid-dashboard"/>
+            <Ref id="dashbuilder"/>
         </Arg>
         <Arg>BeanManager</Arg>
         <Arg>
@@ -48,14 +48,14 @@
 
     <New id="KieContributorsDataSource" class="org.eclipse.jetty.plus.jndi.Resource">
         <Arg>
-            <Ref id="teiid-dashboard"/>
+            <Ref id="dashbuilder"/>
         </Arg>
-        <Arg>jdbc/teiid-dashboard</Arg>
+        <Arg>jdbc/dashbuilder</Arg>
         <Arg>
             <New class="org.jboss.dashboard.database.NonPooledDataSource">
-                <Set name="url">jdbc:h2:./db/teiid-dashboard</Set>
-                <Set name="user">teiid-dashboard</Set>
-                <Set name="password">teiid-dashboard</Set>
+                <Set name="url">jdbc:h2:./db/dashbuilder</Set>
+                <Set name="user">dashbuilder</Set>
+                <Set name="password">dashbuilder</Set>
                 <Set name="driver">org.h2.Driver</Set>
                 <Set name="isolation">2</Set>
             </New>
