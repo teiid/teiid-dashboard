@@ -18,7 +18,7 @@
 <web-app metadata-complete="false">
 
     <display-name>teiid-dashboard</display-name>
-    <description>Teiid Dashboard Builder</description>
+    <description>Teiid Dashboard-Builder</description>
 
     <!-- Security configuration -->
 
@@ -35,7 +35,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>Free access</web-resource-name>
-            <url-pattern>/images/jb_logo.png</url-pattern>
+            <url-pattern>/redhat/*</url-pattern>
         </web-resource-collection>
     </security-constraint>
 
@@ -67,7 +67,7 @@
 
     <resource-ref>
         <description>Teiid Dashboard Datasource</description>
-        <res-ref-name>jdbc/teiid-dashboard</res-ref-name>
+        <res-ref-name>jdbc/dashbuilder</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
     </resource-ref>
