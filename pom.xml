@@ -30,11 +30,13 @@
 
     <properties>
         <hyear>2013</hyear>
+        <version.org.jboss.integration-platform>6.0.0-SNAPSHOT</version.org.jboss.integration-platform>
+        <jbossas-version>7.2.1.Final-redhat-10</jbossas-version>
+
         <version.weld.spi>1.1.Final</version.weld.spi>
         <version.weld>1.1.13.Final</version.weld>
         <version.jetty>8.1.7.v20120910</version.jetty>
-        <version.hibernate>4.2.0.Final</version.hibernate>
-        <version.dashbuilder>6.0.0-redhat-3</version.dashbuilder>
+        <version.dashbuilder>6.0.0-redhat-5</version.dashbuilder>
         <version.teiid>8.4.1</version.teiid>
     </properties>
 
@@ -64,43 +66,61 @@
     <modules>
         <module>modules</module>
     </modules>
+    
+    <dependencyManagement>
+        <dependencies> 
+          <dependency>
+            <groupId>org.jboss.integration-platform</groupId>
+            <artifactId>jboss-integration-platform-bom</artifactId>
+            <version>${version.org.jboss.integration-platform}</version>
+            <scope>import</scope>
+            <type>pom</type>
+          </dependency>   
+          <dependency>
+             <groupId>org.jboss.as</groupId>
+             <artifactId>jboss-as-parent</artifactId>
+             <version>${jbossas-version}</version>
+             <type>pom</type>
+             <scope>import</scope>
+          </dependency>                
+                                                                                    
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>org.jboss.teiid</groupId>
-            <artifactId>teiid-client</artifactId>
-            <version>${version.teiid}</version>
-        </dependency>
-                <dependency>
-            <groupId>dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-            <version>1.6.1-redhat-5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.dashboard-builder</groupId>
-            <artifactId>dashboard-commons</artifactId>
-            <version>${version.dashbuilder}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.dashboard-builder</groupId>
-            <artifactId>dashboard-security</artifactId>
-            <version>${version.dashbuilder}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.dashboard-builder</groupId>
-            <artifactId>dashboard-displayer-core</artifactId>
-            <version>${version.dashbuilder}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.dashboard-builder</groupId>
-            <artifactId>dashboard-ui-core</artifactId>
-            <version>${version.dashbuilder}</version>
-            <classifier>classes</classifier>
-            <scope>provided</scope>
-        </dependency>
+         
+            <dependency>
+                <groupId>org.jboss.teiid</groupId>
+                <artifactId>teiid-client</artifactId>
+                <version>${version.teiid}</version>
+            </dependency>  
+   
+            <dependency>
+                <groupId>org.jboss.dashboard-builder</groupId>
+                <artifactId>dashboard-commons</artifactId>
+                <version>${version.dashbuilder}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.dashboard-builder</groupId>
+                <artifactId>dashboard-security</artifactId>
+                <version>${version.dashbuilder}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.dashboard-builder</groupId>
+                <artifactId>dashboard-displayer-core</artifactId>
+                <version>${version.dashbuilder}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.dashboard-builder</groupId>
+                <artifactId>dashboard-ui-core</artifactId>
+                <version>${version.dashbuilder}</version>
+                <classifier>classes</classifier>
+                <scope>provided</scope>
+            </dependency>
+    
     </dependencies>
 
     <profiles>
