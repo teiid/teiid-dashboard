@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.jboss.teiid.teiid-dashboard</groupId>
         <artifactId>teiid-dashboard-parent</artifactId>
         <version>1.0.0</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>teiid-dashboard-builder</artifactId>
     <packaging>pom</packaging>
@@ -25,6 +25,19 @@
         </dependency>
 
         <!-- Dependencies for the demo-installer.zip -->
+                
+        <dependency>
+                <groupId>org.jboss.teiid</groupId>
+                <artifactId>teiid-client</artifactId>
+                <version>${version.teiid}</version>
+                <scope>provided</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.jboss.teiid</groupId>
+                        <artifactId>teiid-common-core</artifactId>
+                    </exclusion>
+                </exclusions>                
+        </dependency>      
 
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
@@ -38,7 +51,7 @@
         <dependency>
             <groupId>org.jboss.weld</groupId>
             <artifactId>weld-spi</artifactId>
-            <version>${version.weld.spi}</version>
+            <!--version>${version.weld.spi}</version-->
         </dependency>
         <dependency>
             <groupId>org.jboss.weld</groupId>
@@ -51,7 +64,7 @@
         <dependency>
             <groupId>org.jboss.weld.servlet</groupId>
             <artifactId>weld-servlet</artifactId>
-            <version>${version.weld}</version>
+            <!--version>${version.weld}</version-->
         </dependency>
 
     </dependencies>
