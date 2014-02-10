@@ -17,8 +17,8 @@ limitations under the License.
 
 -->
 <!DOCTYPE hibernate-configuration
-        PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
-        "http://www.jboss.org/dtd/hibernate/hibernate-configuration-3.0.dtd">
+PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
 
