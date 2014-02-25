@@ -20,5 +20,5 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <display-name>Teiid Dashboard</display-name>
+    <display-name>Data Virtualizatio Dashboard</display-name>
 </web-app>

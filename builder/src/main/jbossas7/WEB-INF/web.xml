@@ -17,9 +17,8 @@
 -->
 <web-app metadata-complete="false">
 
-    <display-name>teiid-dashboard</display-name>
-
-    <description>Teiid Dashboard-Builder</description>
+    <display-name>dashboard</display-name>
+    <description>JBoss Dashboard-Builder Application</description>
 
     <!-- Security configuration -->
 
@@ -67,7 +66,7 @@
     <!-- Application main data source definition -->
 
     <resource-ref>
-        <description>Teiid Dashboard Datasource</description>
+        <description>Dashboard Builder Datasource</description>
         <res-ref-name>jdbc/dashbuilder</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
