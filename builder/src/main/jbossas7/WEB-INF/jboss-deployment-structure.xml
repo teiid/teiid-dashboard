@@ -22,6 +22,7 @@
         <dependencies>
        		<module name="org.jboss.teiid.client"/>
             <module name="org.hibernate" />
+            <module name="org.dom4j" />
             <module name="org.jdom" />
             <module name="org.slf4j" />
             <module name="org.apache.commons.lang" />

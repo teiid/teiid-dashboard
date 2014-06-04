@@ -20,7 +20,6 @@
         <dependency>
             <groupId>org.jboss.teiid.teiid-dashboard</groupId>
             <artifactId>teiid-dashboard-showcase</artifactId>
-            <version>${project.version}</version>
             <type>war</type>
         </dependency>
 
@@ -29,7 +28,6 @@
         <dependency>
                 <groupId>org.jboss.teiid</groupId>
                 <artifactId>teiid-client</artifactId>
-                <version>${version.teiid}</version>
                 <scope>provided</scope>
                 <exclusions>
                     <exclusion>
@@ -42,7 +40,6 @@
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>jetty-runner</artifactId>
-            <version>${version.jetty}</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -64,6 +61,10 @@
             <groupId>org.jboss.weld.servlet</groupId>
             <artifactId>weld-servlet</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.jboss.weld</groupId>
+            <artifactId>weld-spi</artifactId>
+        </dependency>        
 
     </dependencies>
 
