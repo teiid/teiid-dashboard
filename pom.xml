@@ -18,11 +18,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<parent>
+<!--	<parent>
         <groupId>org.jboss.teiid</groupId>
         <artifactId>teiid-parent</artifactId>
-        <version>8.4.1</version>    
+        <version>8.7.0.Final</version>    
 	</parent>
+-->	
+	<parent>
+    	<groupId>org.jboss.integration-platform</groupId>
+    	<artifactId>jboss-integration-platform-parent</artifactId>
+    	<version>6.0.0.CR9</version>	
+	</parent>	
     
     <modelVersion>4.0.0</modelVersion>
 
@@ -33,13 +39,33 @@
 
     <name>Dashboard Builder for Teiid Project</name>
     <inceptionYear>2013</inceptionYear>
+    
+    <url>http://jboss.org/teiid</url>
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License</name>
+			<url>http://www.gnu.org/copyleft/lesser.html</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
 
     <properties>
         <hyear>2013</hyear>
+		<!-- Explicitly declaring the source encoding eliminates the following 
+			message: -->
+		<!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered 
+			resources, i.e. build is platform dependent! -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	
+		<version.org.jboss.integration-platform>6.0.0.CR9</version.org.jboss.integration-platform>
+		<version.teiid>8.7.0.Final</version.teiid>
+        
 
         <version.jetty>8.1.7.v20120910</version.jetty>
-        <version.dashbuilder>6.1.0-SNAPSHOT</version.dashbuilder>
-        <version.teiid>8.4.1</version.teiid>
+        <version.dashbuilder>6.0.2-redhat-7</version.dashbuilder>
+        <version.org.jboss.weld.spi>${version.org.jboss.weld.weld-api}</version.org.jboss.weld.spi>
+        <version.org.jboss.weld>${version.org.jboss.weld.weld}</version.org.jboss.weld>
     </properties>
 
     <scm>
@@ -48,29 +74,33 @@
       <url>https://github.com/teiid/teiid-dashboard.git</url>
     </scm>
 
-    <repositories>
-        <repository>
-            <id>jboss-public-repository-group</id>
-            <name>JBoss Public Repository Group</name>
-            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
-            <layout>default</layout>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <modules>
         <module>modules</module>
     </modules>
-
-    <dependencies>
-         
+    
+	<dependencyManagement>
+		<dependencies>
+		
+           <dependency>
+            	<groupId>org.jboss.integration-platform</groupId>
+            	<artifactId>jboss-integration-platform-bom</artifactId>
+            	<version>${version.org.jboss.integration-platform}</version>
+            	<scope>import</scope>
+            	<type>pom</type>
+          </dependency> 		
+          <dependency>
+				<groupId>org.jboss.teiid</groupId>
+				<artifactId>teiid-parent</artifactId>
+             	<version>${version.teiid}</version>
+             	<type>pom</type>
+             	<scope>import</scope>
+          </dependency>  
+  			<dependency>
+				<groupId>org.jboss.teiid</groupId>
+				<artifactId>teiid</artifactId>
+				<version>${version.teiid}</version>
+				<classifier>jdbc</classifier>
+			</dependency>	        
             <dependency>
                 <groupId>org.jboss.teiid</groupId>
                 <artifactId>teiid-client</artifactId>
@@ -81,44 +111,58 @@
                         <artifactId>teiid-common-core</artifactId>
                     </exclusion>
                 </exclusions>
-            </dependency>   
+            </dependency> 
+			<dependency>
+				<groupId>org.jboss.dashboard-builder</groupId>
+				<artifactId>dashboard-webapp</artifactId>
+				<version>${version.dashbuilder}</version>
+				<type>war</type>
+			</dependency>              
             <dependency>
                 <groupId>org.jboss.dashboard-builder</groupId>
                 <artifactId>dashboard-commons</artifactId>
                 <version>${version.dashbuilder}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jboss.dashboard-builder</groupId>
                 <artifactId>dashboard-security</artifactId>
                 <version>${version.dashbuilder}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jboss.dashboard-builder</groupId>
                 <artifactId>dashboard-displayer-core</artifactId>
                 <version>${version.dashbuilder}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jboss.dashboard-builder</groupId>
                 <artifactId>dashboard-ui-core</artifactId>
                 <version>${version.dashbuilder}</version>
                 <classifier>classes</classifier>
-                <scope>provided</scope>
             </dependency>
-              <dependency>
+            <dependency>
                 <groupId>org.jboss.weld</groupId>
                 <artifactId>weld-spi</artifactId>
                 <version>${version.org.jboss.weld.spi}</version>
-              </dependency>  
-              <dependency>
+            </dependency>  
+            <dependency>
                 <groupId>org.jboss.weld.servlet</groupId>
                 <artifactId>weld-servlet</artifactId>
                 <version>${version.org.jboss.weld}</version>
-              </dependency>                
-    </dependencies>
-
+            </dependency>  
+			<dependency>
+				<groupId>org.jboss.teiid.teiid-dashboard</groupId>
+				<artifactId>teiid-dashboard-showcase</artifactId>
+				<version>${project.version}</version>
+				<type>war</type>
+			</dependency>   
+			<dependency>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-runner</artifactId>
+				<version>${version.jetty}</version>
+			</dependency>			                         
+    	</dependencies>
+	</dependencyManagement>
+	
     <profiles>
         <profile>
             <id>fullProfile</id>
