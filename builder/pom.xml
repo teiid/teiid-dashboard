@@ -74,6 +74,24 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
+
+                    <execution>
+                        <id>cli</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>teiid-dashbuilder</finalName>
+                            <descriptors>
+                                <descriptor>src/main/assembly/assembly-cli.xml</descriptor>
+                            </descriptors>
+                            <archive>
+                                <addMavenDescriptor>false</addMavenDescriptor>
+                            </archive>
+                        </configuration>
+                    </execution>
+
                     <execution>
                     	<id>demos</id>
                         <phase>package</phase>
