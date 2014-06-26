@@ -18,12 +18,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-<!--	<parent>
-        <groupId>org.jboss.teiid</groupId>
-        <artifactId>teiid-parent</artifactId>
-        <version>8.7.0.Final</version>    
-	</parent>
--->	
 	<parent>
     	<groupId>org.jboss.integration-platform</groupId>
     	<artifactId>jboss-integration-platform-parent</artifactId>
@@ -59,7 +53,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	
 		<version.org.jboss.integration-platform>6.0.0.CR9</version.org.jboss.integration-platform>
-		<version.teiid>8.7.0.Final</version.teiid>
+		<version.org.jboss.teiid>8.7.0.Final</version.org.jboss.teiid>
         
 
         <version.jetty>8.1.7.v20120910</version.jetty>
@@ -91,20 +85,20 @@
           <dependency>
 				<groupId>org.jboss.teiid</groupId>
 				<artifactId>teiid-parent</artifactId>
-             	<version>${version.teiid}</version>
+             	<version>${version.org.jboss.teiid}</version>
              	<type>pom</type>
              	<scope>import</scope>
           </dependency>  
   			<dependency>
 				<groupId>org.jboss.teiid</groupId>
 				<artifactId>teiid</artifactId>
-				<version>${version.teiid}</version>
+				<version>${version.org.jboss.teiid}</version>
 				<classifier>jdbc</classifier>
 			</dependency>	        
             <dependency>
                 <groupId>org.jboss.teiid</groupId>
                 <artifactId>teiid-client</artifactId>
-                <version>${version.teiid}</version>
+                <version>${version.org.jboss.teiid}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.jboss.teiid</groupId>
