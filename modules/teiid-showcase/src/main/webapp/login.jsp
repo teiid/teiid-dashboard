@@ -34,7 +34,7 @@
 
     <div id="login-content">
         <%
-            ResourceBundle i18nBundle = ResourceBundle.getBundle("org.jboss.dashboard.login.messages", LocaleManager.currentLocale());
+            ResourceBundle i18nBundle = ResourceBundle.getBundle("org.jboss.dashboard.login", LocaleManager.currentLocale());
             String messageKey = request.getParameter("message");
             if (messageKey == null) messageKey = "login.hint";
         %>
