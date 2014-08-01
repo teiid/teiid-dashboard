@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kpis>
+  <dataprovider code="dataprovider_84341401722402006" type="sql">
+    <description language="en">AuditLoggingTable</description>
+    <sqlprovider>
+      <datasource>TeiidLogging</datasource>
+<query>Select * from AuditLog</query>
+    </sqlprovider>
+    <dataproperties>
+      <dataproperty id="id">
+        <domain>org.jboss.dashboard.domain.numeric.NumericDomain</domain>
+        <name language="fr">id</name>
+        <name language="zh">id</name>
+        <name language="ja">id</name>
+        <name language="en">ID</name>
+        <name language="es">id</name>
+        <name language="de">id</name>
+        <name language="pt">id</name>
+      </dataproperty>
+      <dataproperty id="activity">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">activity</name>
+        <name language="zh">activity</name>
+        <name language="ja">activity</name>
+        <name language="en">Activity</name>
+        <name language="es">activity</name>
+        <name language="de">activity</name>
+        <name language="pt">activity</name>
+      </dataproperty>
+      <dataproperty id="applicationname">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">applicationname</name>
+        <name language="zh">applicationname</name>
+        <name language="ja">applicationname</name>
+        <name language="en">Application Name</name>
+        <name language="es">applicationname</name>
+        <name language="de">applicationname</name>
+        <name language="pt">applicationname</name>
+      </dataproperty>
+      <dataproperty id="context">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">context</name>
+        <name language="zh">context</name>
+        <name language="ja">context</name>
+        <name language="en">Context</name>
+        <name language="es">context</name>
+        <name language="de">context</name>
+        <name language="pt">context</name>
+      </dataproperty>
+      <dataproperty id="principal">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">principal</name>
+        <name language="zh">principal</name>
+        <name language="ja">principal</name>
+        <name language="en">Principal</name>
+        <name language="es">principal</name>
+        <name language="de">principal</name>
+        <name language="pt">principal</name>
+      </dataproperty>
+      <dataproperty id="requestid">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">requestid</name>
+        <name language="zh">requestid</name>
+        <name language="ja">requestid</name>
+        <name language="en">RequestId</name>
+        <name language="es">requestid</name>
+        <name language="de">requestid</name>
+        <name language="pt">requestid</name>
+      </dataproperty>
+      <dataproperty id="resources">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">resources</name>
+        <name language="zh">resources</name>
+        <name language="ja">resources</name>
+        <name language="en">Resources</name>
+        <name language="es">resources</name>
+        <name language="de">resources</name>
+        <name language="pt">resources</name>
+      </dataproperty>
+      <dataproperty id="sessionid">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">sessionid</name>
+        <name language="zh">sessionid</name>
+        <name language="ja">sessionid</name>
+        <name language="en">SessionID</name>
+        <name language="es">sessionid</name>
+        <name language="de">sessionid</name>
+        <name language="pt">sessionid</name>
+      </dataproperty>
+      <dataproperty id="vdbname">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">vdbname</name>
+        <name language="zh">vdbname</name>
+        <name language="ja">vdbname</name>
+        <name language="en">VDB Name</name>
+        <name language="es">vdbname</name>
+        <name language="de">vdbname</name>
+        <name language="pt">vdbname</name>
+      </dataproperty>
+      <dataproperty id="vdbversion">
+        <domain convertedFromNumeric="true" >org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">vdbversion</name>
+        <name language="zh">vdbversion</name>
+        <name language="ja">vdbversion</name>
+        <name language="en">VDB Version</name>
+        <name language="es">vdbversion</name>
+        <name language="de">vdbversion</name>
+        <name language="pt">vdbversion</name>
+      </dataproperty>
+    </dataproperties>
+  </dataprovider>
+  <dataprovider code="dataprovider_10951401722888067" type="sql">
+    <description language="en">Command Logging</description>
+    <sqlprovider>
+      <datasource>TeiidLogging</datasource>
+<query>Select * from CommandLog</query>
+    </sqlprovider>
+    <dataproperties>
+      <dataproperty id="id">
+        <domain>org.jboss.dashboard.domain.numeric.NumericDomain</domain>
+        <name language="fr">id</name>
+        <name language="zh">id</name>
+        <name language="ja">id</name>
+        <name language="en">ID</name>
+        <name language="es">id</name>
+        <name language="de">id</name>
+        <name language="pt">id</name>
+      </dataproperty>
+      <dataproperty id="applicationname">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">applicationname</name>
+        <name language="zh">applicationname</name>
+        <name language="ja">applicationname</name>
+        <name language="en">ApplicationName</name>
+        <name language="es">applicationname</name>
+        <name language="de">applicationname</name>
+        <name language="pt">applicationname</name>
+      </dataproperty>
+      <dataproperty id="executionid">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">executionid</name>
+        <name language="zh">executionid</name>
+        <name language="ja">executionid</name>
+        <name language="en">ExecutionId</name>
+        <name language="es">executionid</name>
+        <name language="de">executionid</name>
+        <name language="pt">executionid</name>
+      </dataproperty>
+      <dataproperty id="modelname">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">modelname</name>
+        <name language="zh">modelname</name>
+        <name language="ja">modelname</name>
+        <name language="en">Model Name</name>
+        <name language="es">modelname</name>
+        <name language="de">modelname</name>
+        <name language="pt">modelname</name>
+      </dataproperty>
+      <dataproperty id="plan">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">plan</name>
+        <name language="zh">plan</name>
+        <name language="ja">plan</name>
+        <name language="en">Query Plan</name>
+        <name language="es">plan</name>
+        <name language="de">plan</name>
+        <name language="pt">plan</name>
+      </dataproperty>
+      <dataproperty id="principal">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">principal</name>
+        <name language="zh">principal</name>
+        <name language="ja">principal</name>
+        <name language="en">Principal</name>
+        <name language="es">principal</name>
+        <name language="de">principal</name>
+        <name language="pt">principal</name>
+      </dataproperty>
+      <dataproperty id="requestid">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">requestid</name>
+        <name language="zh">requestid</name>
+        <name language="ja">requestid</name>
+        <name language="en">Request ID</name>
+        <name language="es">requestid</name>
+        <name language="de">requestid</name>
+        <name language="pt">requestid</name>
+      </dataproperty>
+      <dataproperty id="rowcount">
+        <domain>org.jboss.dashboard.domain.numeric.NumericDomain</domain>
+        <name language="fr">rowcount</name>
+        <name language="zh">rowcount</name>
+        <name language="ja">rowcount</name>
+        <name language="en">Row Count</name>
+        <name language="es">rowcount</name>
+        <name language="de">rowcount</name>
+        <name language="pt">rowcount</name>
+      </dataproperty>
+      <dataproperty id="sessionid">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">sessionid</name>
+        <name language="zh">sessionid</name>
+        <name language="ja">sessionid</name>
+        <name language="en">Session ID</name>
+        <name language="es">sessionid</name>
+        <name language="de">sessionid</name>
+        <name language="pt">sessionid</name>
+      </dataproperty>
+      <dataproperty id="sourcecommand">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">sourcecommand</name>
+        <name language="zh">sourcecommand</name>
+        <name language="ja">sourcecommand</name>
+        <name language="en">Source Command</name>
+        <name language="es">sourcecommand</name>
+        <name language="de">sourcecommand</name>
+        <name language="pt">sourcecommand</name>
+      </dataproperty>
+      <dataproperty id="sourcerequestid">
+        <domain>org.jboss.dashboard.domain.numeric.NumericDomain</domain>
+        <name language="fr">sourcerequestid</name>
+        <name language="zh">sourcerequestid</name>
+        <name language="ja">sourcerequestid</name>
+        <name language="en">Source Request ID</name>
+        <name language="es">sourcerequestid</name>
+        <name language="de">sourcerequestid</name>
+        <name language="pt">sourcerequestid</name>
+      </dataproperty>
+      <dataproperty id="sqlcmd">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">sqlcmd</name>
+        <name language="zh">sqlcmd</name>
+        <name language="ja">sqlcmd</name>
+        <name language="en">SQL Command</name>
+        <name language="es">sqlcmd</name>
+        <name language="de">sqlcmd</name>
+        <name language="pt">sqlcmd</name>
+      </dataproperty>
+      <dataproperty id="eventtype">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">eventtype</name>
+        <name language="zh">eventtype</name>
+        <name language="ja">eventtype</name>
+        <name language="en">Event Type</name>
+        <name language="es">eventtype</name>
+        <name language="de">eventtype</name>
+        <name language="pt">eventtype</name>
+      </dataproperty>
+      <dataproperty id="logtime">
+        <domain>org.jboss.dashboard.domain.date.DateDomain</domain>
+        <name language="fr">logtime</name>
+        <name language="zh">logtime</name>
+        <name language="ja">logtime</name>
+        <name language="en">Log Time</name>
+        <name language="es">logtime</name>
+        <name language="de">logtime</name>
+        <name language="pt">logtime</name>
+      </dataproperty>
+      <dataproperty id="transactionid">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">transactionid</name>
+        <name language="zh">transactionid</name>
+        <name language="ja">transactionid</name>
+        <name language="en">Transaction ID</name>
+        <name language="es">transactionid</name>
+        <name language="de">transactionid</name>
+        <name language="pt">transactionid</name>
+      </dataproperty>
+      <dataproperty id="translatorname">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">translatorname</name>
+        <name language="zh">translatorname</name>
+        <name language="ja">translatorname</name>
+        <name language="en">Translator Name</name>
+        <name language="es">translatorname</name>
+        <name language="de">translatorname</name>
+        <name language="pt">translatorname</name>
+      </dataproperty>
+      <dataproperty id="vdbname">
+        <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">vdbname</name>
+        <name language="zh">vdbname</name>
+        <name language="ja">vdbname</name>
+        <name language="en">VDB Name</name>
+        <name language="es">vdbname</name>
+        <name language="de">vdbname</name>
+        <name language="pt">vdbname</name>
+      </dataproperty>
+      <dataproperty id="vdbversion">
+        <domain convertedFromNumeric="true" >org.jboss.dashboard.domain.label.LabelDomain</domain>
+        <name language="fr">vdbversion</name>
+        <name language="zh">vdbversion</name>
+        <name language="ja">vdbversion</name>
+        <name language="en">VDB Version</name>
+        <name language="es">vdbversion</name>
+        <name language="de">vdbversion</name>
+        <name language="pt">vdbversion</name>
+      </dataproperty>
+    </dataproperties>
+  </dataprovider>
+  <kpi code="kpi_16821401722967869">
+    <description language="de">- Neue Kennziffer -</description>
+    <description language="zh">- &#26032;&#24314;&#25351;&#26631; -</description>
+    <description language="pt">- Novo indicador -</description>
+    <description language="fr">- Nouvel indicateur -</description>
+    <description language="en">Command Log Contents</description>
+    <description language="es">- Nuevo indicador - </description>
+    <description language="ja">- &#26032;&#12375;&#12356;&#25351;&#27161; -</description>
+    <provider code="dataprovider_10951401722888067" />
+    <displayer type="table" renderer="default">
+      <rowsperpage>10</rowsperpage>
+      <headerposition>top</headerposition>
+      <htmlstyle>border: 1px solid #000000; padding:0; text-align:center;</htmlstyle>
+      <htmlclass>skn-table_border</htmlclass>
+      <rowevenclass>skn-even_row</rowevenclass>
+      <rowoddclass>skn-odd_row</rowoddclass>
+      <rowhoverclass>skn-even_row_alt</rowhoverclass>
+      <column>
+        <modelproperty>id</modelproperty>
+        <viewindex>0</viewindex>
+        <name language="fr">id</name>
+        <name language="zh">id</name>
+        <name language="ja">id</name>
+        <name language="en">ID</name>
+        <name language="es">id</name>
+        <name language="de">id</name>
+        <name language="pt">id</name>
+        <hint language="fr">id</hint>
+        <hint language="zh">id</hint>
+        <hint language="ja">id</hint>
+        <hint language="en">ID</hint>
+        <hint language="es">id</hint>
+        <hint language="de">id</hint>
+        <hint language="pt">id</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>applicationname</modelproperty>
+        <viewindex>1</viewindex>
+        <name language="fr">applicationname</name>
+        <name language="zh">applicationname</name>
+        <name language="ja">applicationname</name>
+        <name language="en">ApplicationName</name>
+        <name language="es">applicationname</name>
+        <name language="de">applicationname</name>
+        <name language="pt">applicationname</name>
+        <hint language="fr">applicationname</hint>
+        <hint language="zh">applicationname</hint>
+        <hint language="ja">applicationname</hint>
+        <hint language="en">ApplicationName</hint>
+        <hint language="es">applicationname</hint>
+        <hint language="de">applicationname</hint>
+        <hint language="pt">applicationname</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>true</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>executionid</modelproperty>
+        <viewindex>2</viewindex>
+        <name language="fr">executionid</name>
+        <name language="zh">executionid</name>
+        <name language="ja">executionid</name>
+        <name language="en">ExecutionId</name>
+        <name language="es">executionid</name>
+        <name language="de">executionid</name>
+        <name language="pt">executionid</name>
+        <hint language="fr">executionid</hint>
+        <hint language="zh">executionid</hint>
+        <hint language="ja">executionid</hint>
+        <hint language="en">ExecutionId</hint>
+        <hint language="es">executionid</hint>
+        <hint language="de">executionid</hint>
+        <hint language="pt">executionid</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>modelname</modelproperty>
+        <viewindex>3</viewindex>
+        <name language="fr">modelname</name>
+        <name language="zh">modelname</name>
+        <name language="ja">modelname</name>
+        <name language="en">Model Name</name>
+        <name language="es">modelname</name>
+        <name language="de">modelname</name>
+        <name language="pt">modelname</name>
+        <hint language="fr">modelname</hint>
+        <hint language="zh">modelname</hint>
+        <hint language="ja">modelname</hint>
+        <hint language="en">Model Name</hint>
+        <hint language="es">modelname</hint>
+        <hint language="de">modelname</hint>
+        <hint language="pt">modelname</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>true</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>plan</modelproperty>
+        <viewindex>4</viewindex>
+        <name language="fr">plan</name>
+        <name language="zh">plan</name>
+        <name language="ja">plan</name>
+        <name language="en">Query Plan</name>
+        <name language="es">plan</name>
+        <name language="de">plan</name>
+        <name language="pt">plan</name>
+        <hint language="fr">plan</hint>
+        <hint language="zh">plan</hint>
+        <hint language="ja">plan</hint>
+        <hint language="en">Query Plan</hint>
+        <hint language="es">plan</hint>
+        <hint language="de">plan</hint>
+        <hint language="pt">plan</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>principal</modelproperty>
+        <viewindex>5</viewindex>
+        <name language="fr">principal</name>
+        <name language="zh">principal</name>
+        <name language="ja">principal</name>
+        <name language="en">Principal</name>
+        <name language="es">principal</name>
+        <name language="de">principal</name>
+        <name language="pt">principal</name>
+        <hint language="fr">principal</hint>
+        <hint language="zh">principal</hint>
+        <hint language="ja">principal</hint>
+        <hint language="en">Principal</hint>
+        <hint language="es">principal</hint>
+        <hint language="de">principal</hint>
+        <hint language="pt">principal</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>true</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>requestid</modelproperty>
+        <viewindex>6</viewindex>
+        <name language="fr">requestid</name>
+        <name language="zh">requestid</name>
+        <name language="ja">requestid</name>
+        <name language="en">Request ID</name>
+        <name language="es">requestid</name>
+        <name language="de">requestid</name>
+        <name language="pt">requestid</name>
+        <hint language="fr">requestid</hint>
+        <hint language="zh">requestid</hint>
+        <hint language="ja">requestid</hint>
+        <hint language="en">Request ID</hint>
+        <hint language="es">requestid</hint>
+        <hint language="de">requestid</hint>
+        <hint language="pt">requestid</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>rowcount</modelproperty>
+        <viewindex>7</viewindex>
+        <name language="fr">rowcount</name>
+        <name language="zh">rowcount</name>
+        <name language="ja">rowcount</name>
+        <name language="en">Row Count</name>
+        <name language="es">rowcount</name>
+        <name language="de">rowcount</name>
+        <name language="pt">rowcount</name>
+        <hint language="fr">rowcount</hint>
+        <hint language="zh">rowcount</hint>
+        <hint language="ja">rowcount</hint>
+        <hint language="en">Row Count</hint>
+        <hint language="es">rowcount</hint>
+        <hint language="de">rowcount</hint>
+        <hint language="pt">rowcount</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>sessionid</modelproperty>
+        <viewindex>8</viewindex>
+        <name language="fr">sessionid</name>
+        <name language="zh">sessionid</name>
+        <name language="ja">sessionid</name>
+        <name language="en">Session ID</name>
+        <name language="es">sessionid</name>
+        <name language="de">sessionid</name>
+        <name language="pt">sessionid</name>
+        <hint language="fr">sessionid</hint>
+        <hint language="zh">sessionid</hint>
+        <hint language="ja">sessionid</hint>
+        <hint language="en">Session ID</hint>
+        <hint language="es">sessionid</hint>
+        <hint language="de">sessionid</hint>
+        <hint language="pt">sessionid</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>sourcecommand</modelproperty>
+        <viewindex>9</viewindex>
+        <name language="fr">sourcecommand</name>
+        <name language="zh">sourcecommand</name>
+        <name language="ja">sourcecommand</name>
+        <name language="en">Source Command</name>
+        <name language="es">sourcecommand</name>
+        <name language="de">sourcecommand</name>
+        <name language="pt">sourcecommand</name>
+        <hint language="fr">sourcecommand</hint>
+        <hint language="zh">sourcecommand</hint>
+        <hint language="ja">sourcecommand</hint>
+        <hint language="en">Source Command</hint>
+        <hint language="es">sourcecommand</hint>
+        <hint language="de">sourcecommand</hint>
+        <hint language="pt">sourcecommand</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+    </displayer>
+  </kpi>
+  <kpi code="kpi_16671401722531063">
+    <description language="de">- Neue Kennziffer -</description>
+    <description language="zh">- &#26032;&#24314;&#25351;&#26631; -</description>
+    <description language="pt">- Novo indicador -</description>
+    <description language="fr">- Nouvel indicateur -</description>
+    <description language="en">Logging Contents</description>
+    <description language="es">- Nuevo indicador - </description>
+    <description language="ja">- &#26032;&#12375;&#12356;&#25351;&#27161; -</description>
+    <provider code="dataprovider_84341401722402006" />
+    <displayer type="table" renderer="default">
+      <rowsperpage>10</rowsperpage>
+      <headerposition>top</headerposition>
+      <htmlstyle>border: 1px solid #000000; padding:0; text-align:center;</htmlstyle>
+      <htmlclass>skn-table_border</htmlclass>
+      <rowevenclass>skn-even_row</rowevenclass>
+      <rowoddclass>skn-odd_row</rowoddclass>
+      <rowhoverclass>skn-even_row_alt</rowhoverclass>
+      <groupby>
+        <propertyid>id</propertyid>
+        <name language="fr">id</name>
+        <name language="zh">id</name>
+        <name language="ja">id</name>
+        <name language="en">ID</name>
+        <name language="es">id</name>
+        <name language="de">id</name>
+        <name language="pt">id</name>
+        <maxnumberofintervals>10</maxnumberofintervals>
+        <taminterval>-1</taminterval>
+        <showtotals>true</showtotals>
+        <totalshtmlstyle>text-align:center; background-color:#DEE5EC; height:20px; font-weight:Bold;</totalshtmlstyle>
+      </groupby>
+      <column>
+        <modelproperty>id</modelproperty>
+        <viewindex>0</viewindex>
+        <name language="fr">id</name>
+        <name language="zh">id</name>
+        <name language="ja">id</name>
+        <name language="en">ID</name>
+        <name language="es">id</name>
+        <name language="de">id</name>
+        <name language="pt">id</name>
+        <hint language="fr">id</hint>
+        <hint language="zh">id</hint>
+        <hint language="ja">id</hint>
+        <hint language="en">ID</hint>
+        <hint language="es">id</hint>
+        <hint language="de">id</hint>
+        <hint language="pt">id</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>activity</modelproperty>
+        <viewindex>1</viewindex>
+        <name language="fr">activity</name>
+        <name language="zh">activity</name>
+        <name language="ja">activity</name>
+        <name language="en">Activity</name>
+        <name language="es">activity</name>
+        <name language="de">activity</name>
+        <name language="pt">activity</name>
+        <hint language="fr">activity</hint>
+        <hint language="zh">activity</hint>
+        <hint language="ja">activity</hint>
+        <hint language="en">Activity</hint>
+        <hint language="es">activity</hint>
+        <hint language="de">activity</hint>
+        <hint language="pt">activity</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+        <groupbyfunction>count</groupbyfunction>
+      </column>
+      <column>
+        <modelproperty>applicationname</modelproperty>
+        <viewindex>2</viewindex>
+        <name language="fr">applicationname</name>
+        <name language="zh">applicationname</name>
+        <name language="ja">applicationname</name>
+        <name language="en">Application Name</name>
+        <name language="es">applicationname</name>
+        <name language="de">applicationname</name>
+        <name language="pt">applicationname</name>
+        <hint language="fr">applicationname</hint>
+        <hint language="zh">applicationname</hint>
+        <hint language="ja">applicationname</hint>
+        <hint language="en">Application Name</hint>
+        <hint language="es">applicationname</hint>
+        <hint language="de">applicationname</hint>
+        <hint language="pt">applicationname</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+        <groupbyfunction>count</groupbyfunction>
+      </column>
+      <column>
+        <modelproperty>context</modelproperty>
+        <viewindex>3</viewindex>
+        <name language="fr">context</name>
+        <name language="zh">context</name>
+        <name language="ja">context</name>
+        <name language="en">Context</name>
+        <name language="es">context</name>
+        <name language="de">context</name>
+        <name language="pt">context</name>
+        <hint language="fr">context</hint>
+        <hint language="zh">context</hint>
+        <hint language="ja">context</hint>
+        <hint language="en">Context</hint>
+        <hint language="es">context</hint>
+        <hint language="de">context</hint>
+        <hint language="pt">context</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+        <groupbyfunction>count</groupbyfunction>
+      </column>
+      <column>
+        <modelproperty>principal</modelproperty>
+        <viewindex>4</viewindex>
+        <name language="fr">principal</name>
+        <name language="zh">principal</name>
+        <name language="ja">principal</name>
+        <name language="en">Principal</name>
+        <name language="es">principal</name>
+        <name language="de">principal</name>
+        <name language="pt">principal</name>
+        <hint language="fr">principal</hint>
+        <hint language="zh">principal</hint>
+        <hint language="ja">principal</hint>
+        <hint language="en">Principal</hint>
+        <hint language="es">principal</hint>
+        <hint language="de">principal</hint>
+        <hint language="pt">principal</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+        <groupbyfunction>count</groupbyfunction>
+      </column>
+      <column>
+        <modelproperty>requestid</modelproperty>
+        <viewindex>5</viewindex>
+        <name language="fr">requestid</name>
+        <name language="zh">requestid</name>
+        <name language="ja">requestid</name>
+        <name language="en">RequestId</name>
+        <name language="es">requestid</name>
+        <name language="de">requestid</name>
+        <name language="pt">requestid</name>
+        <hint language="fr">requestid</hint>
+        <hint language="zh">requestid</hint>
+        <hint language="ja">requestid</hint>
+        <hint language="en">RequestId</hint>
+        <hint language="es">requestid</hint>
+        <hint language="de">requestid</hint>
+        <hint language="pt">requestid</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+        <groupbyfunction>count</groupbyfunction>
+      </column>
+      <column>
+        <modelproperty>resources</modelproperty>
+        <viewindex>6</viewindex>
+        <name language="fr">resources</name>
+        <name language="zh">resources</name>
+        <name language="ja">resources</name>
+        <name language="en">Resources</name>
+        <name language="es">resources</name>
+        <name language="de">resources</name>
+        <name language="pt">resources</name>
+        <hint language="fr">resources</hint>
+        <hint language="zh">resources</hint>
+        <hint language="ja">resources</hint>
+        <hint language="en">Resources</hint>
+        <hint language="es">resources</hint>
+        <hint language="de">resources</hint>
+        <hint language="pt">resources</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+        <groupbyfunction>count</groupbyfunction>
+      </column>
+      <column>
+        <modelproperty>sessionid</modelproperty>
+        <viewindex>7</viewindex>
+        <name language="fr">sessionid</name>
+        <name language="zh">sessionid</name>
+        <name language="ja">sessionid</name>
+        <name language="en">SessionID</name>
+        <name language="es">sessionid</name>
+        <name language="de">sessionid</name>
+        <name language="pt">sessionid</name>
+        <hint language="fr">sessionid</hint>
+        <hint language="zh">sessionid</hint>
+        <hint language="ja">sessionid</hint>
+        <hint language="en">SessionID</hint>
+        <hint language="es">sessionid</hint>
+        <hint language="de">sessionid</hint>
+        <hint language="pt">sessionid</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+        <groupbyfunction>count</groupbyfunction>
+      </column>
+      <column>
+        <modelproperty>vdbname</modelproperty>
+        <viewindex>8</viewindex>
+        <name language="fr">vdbname</name>
+        <name language="zh">vdbname</name>
+        <name language="ja">vdbname</name>
+        <name language="en">VDB Name</name>
+        <name language="es">vdbname</name>
+        <name language="de">vdbname</name>
+        <name language="pt">vdbname</name>
+        <hint language="fr">vdbname</hint>
+        <hint language="zh">vdbname</hint>
+        <hint language="ja">vdbname</hint>
+        <hint language="en">VDB Name</hint>
+        <hint language="es">vdbname</hint>
+        <hint language="de">vdbname</hint>
+        <hint language="pt">vdbname</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+        <groupbyfunction>count</groupbyfunction>
+      </column>
+      <column>
+        <modelproperty>vdbversion</modelproperty>
+        <viewindex>9</viewindex>
+        <name language="fr">vdbversion</name>
+        <name language="zh">vdbversion</name>
+        <name language="ja">vdbversion</name>
+        <name language="en">VDB Version</name>
+        <name language="es">vdbversion</name>
+        <name language="de">vdbversion</name>
+        <name language="pt">vdbversion</name>
+        <hint language="fr">vdbversion</hint>
+        <hint language="zh">vdbversion</hint>
+        <hint language="ja">vdbversion</hint>
+        <hint language="en">VDB Version</hint>
+        <hint language="es">vdbversion</hint>
+        <hint language="de">vdbversion</hint>
+        <hint language="pt">vdbversion</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+        <groupbyfunction>count</groupbyfunction>
+      </column>
+    </displayer>
+  </kpi>
+</kpis>
