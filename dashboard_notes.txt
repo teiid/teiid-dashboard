@@ -1,0 +1,130 @@
+Before you begin, think about what's the hierarchy (flow) of pages you want.  As an example:
+
+-	Home Page
+	-	Graphics Page
+-	Administration
+	-	Data Source Connections
+	-	Data Source Queries/Providers
+	
+You need to think about the types of users (i.e, administrator, read only users, etc) so that the
+appropriate pages can be accounted for in the layout and that they will have access to when they
+login.
+
+------------------------
+
+Below is a summarization of the steps to create a simple workspace based on the above example:
+
+Here's what you will accomplish:
+-  create new workspace
+	-  set permissions - add user role read access
+-  create a home page
+-  create a child pages in the hierarchy
+-  add details to each page (i.e,, setting up datasources and data providers)
+-  add graphic display page based on the data provider
+-  log out and back in as user to see the graphics, and demonstrate role access
+
+------------
+
+
+Login using the admin username/password
+
+1.   Create workspace
+	-	select "create workspace" icon to create new workspace properties
+	-  	enter workspace name and title
+	-  	use the defaults for Skin and Envelope
+	-	then press "create workspace"
+
+2.	Create Pages
+
+in the list above, click on the new workspace to edit the details
+
+Notice "User home search" is set to "Role assigned by Page", that this workspace will be using 
+role based access.
+
+Set Permissions
+-  click on Permissions on the left, under the workspace
+-  Admin is already given rights, now give rights to user
+-  select role of "user", and change Access to Yes
+-  click save
+
+Next will build a tree heirarchy of pages
+-	Home
+	-	Graphics Page
+-	Administration
+	-	Data Source Connections
+	-	Data Source Queries/Providers
+	
+
+2.   create 'Home' page, which is the root page
+
+-   from the tree of workspaces on the left, expand to Workspaces/{workspace}   and click on Pages (which will be empty on the right)
+-   on the far right, click on the page icon (yellow) to create new page
+-   enter page name and press create new page
+
+
+The next steps are designing the page hierarchical structure of the pages, starting with the root (home) page, and adding
+adding children pages.
+
+===
+HOME PAGE
+===
+
+3.  Start with the Home page in the workspace
+  
+-   click on workspace from the top drop down (select the one just created)
+-   the center drop down should show 'Home' selected, if not then select it
+
+
+4.  to add tree menu panel
+
+-  click on puzzle icon to create panel
+- expand “Navigation” to select Tree Menu
+-  on the right should display "Components", with "Create panel" in the list
+-  drag-n-drop the “Create Panel” (under components) to the left side of the page (you will see the page locations appear) 
+
+5.  Add logoff panel 
+-  click on puzzle icon to create panel
+- expand “Navigation” to select Logout panel
+-  drag-n-drop the “Create Panel” to the page to the top right side, in the header section
+
+added bread crum
+
+===
+Child Pages
+===
+
+6.  Adding pages under 'Home'
+-   click the 'Create' page icon
+-   enter the title of the page
+-   change the Parent Page
+-   press "Create new page" 
+
+--- Add Data Sources Connections and Data Source Queries
+
+-  Data Sources Connections --> Panel -->  System/Data Source manager
+-  Data Source Queries --> Panel -->  Dashboard/Data provider manager
+
+
+Now to add a graphic panel (PKI) to the page you just created.  Select your page,
+that is listed under the Home page, in the tree on the left hand side.
+It presents an empty panel.
+
+Repeat steps 4 and 5 above.
+
+7.  Add Graphic Panel (KPI)
+-  click on puzzle icon to create panel
+- expand “Dashboard” to select Key Performance Indicator (KPI)
+-  drag-n-drop the “Create Panel” to one of the center locations
+
+-  the next dialog will appear, asking to choose an instance (should see your data provider)
+-  the KPI editor will now appear
+-  Enter the KPI name
+-  select the graph type
+
+NOTE:  there is not a “Save” or some button to push to complete this page, select the “x” on the top right corner to close.
+
+Your done.
+
+But to see it as a "user", I don't think a user with the role of user has bee created on the server.   If it has, you can log in with it, using the URL that you set in step 1 above.  With this user, you won't see the admin options, but will see it as regular user.
+
+Call/text or email me if you have any issues.
