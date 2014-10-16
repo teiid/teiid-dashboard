@@ -37,7 +37,7 @@
     <properties>
         <hyear>2013</hyear>
 
-        <version.dashbuilder>6.0.0-redhat-7</version.dashbuilder>
+        <version.dashbuilder>6.0.3-SNAPSHOT</version.dashbuilder>
         
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	
