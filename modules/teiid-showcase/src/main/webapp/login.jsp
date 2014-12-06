@@ -22,7 +22,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Red Hat Data Virtualization Dashboard</title>
+    <title>JBoss Data Virtualization Dashboard</title>
 
     <style type="text/css">
         * {
@@ -33,10 +33,10 @@
             margin: 0;
             pading: 0;
             color: #fff;
+            background:url(redhat/login-screen-background.jpg) repeat;
             font-size: 14px;
             text-shadow: #050505 0 -1px 0;
             font-weight: bold;
-            background:url(redhat/login-screen-background.jpg) no-repeat;
         }
 
         li {
@@ -48,7 +48,7 @@
             top: 0;
             left: 0;
             border-bottom: solid 3px #777973;
-            height: 0 px;
+            height: 0px;
             width: 100%;
             background: #FFFFFF;
             z-index: 1;
@@ -76,12 +76,19 @@
         }
 
         #login-top {
-            height: 120px;
+            height: 60px;
             width: 201px;
             padding-top: 20px;
             text-align: left;
         }
-
+        #login-rh {
+            height: 60px;
+            width: 201px;
+            padding-top: 20px;
+            text-align: left;
+        }
+        
+ 
         #login-content {
             margin-top: 120px;
         }
@@ -154,7 +161,10 @@
 
 <div id="login-wrapper" class="png_bg">
     <div id="login-top">
-        <img src="<%=request.getContextPath()%>/redhat/login-screen-logo.png" alt="RedHat Logo" title="Powered By JBoss"/>
+        <img src="<%=request.getContextPath()%>/redhat/login-screen-logo.png" alt="JBoss Logo" title="Powered By JBoss"/>
+    </div>
+    <div id="login-rh" >
+        <img src="<%=request.getContextPath()%>/redhat/RH-Product-Name.png" alt="" width="400" height="30"  />
     </div>
 
     <div id="login-content">
@@ -170,8 +180,6 @@
         %>
         <h3><%= i18nBundle.getString(messageKey) %></h3>
         <form action="j_security_check" method="POST">
-         <fieldset>
-         <legend><img src="redhat/RH-Product-Name.png" alt="" /></legend>
             <p>
                 <label><%= i18nBundle.getString("login.username") %></label>
                 <input value="" name="j_username" class="text-input" type="text" autofocus/>
@@ -187,7 +195,7 @@
             <p>
                 <input class="button" type="submit" value="Sign In"/>
             </p>
-		</fieldset>        
+
         </form>
     </div>
 </div>
