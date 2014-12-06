@@ -20,5 +20,5 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <display-name>Data Virtualization Dashboard</display-name>
+    <display-name>JBoss Data Virtualization Dashboard</display-name>
 </web-app>
