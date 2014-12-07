@@ -31,6 +31,11 @@
         <description>End user</description>
         <role-name>user</role-name>
     </security-role>
+    
+    <security-role>
+        <description>Logging user</description>
+        <role-name>logging</role-name>
+    </security-role>    
 
     <security-constraint>
         <web-resource-collection>
@@ -47,6 +52,7 @@
         <auth-constraint>
             <role-name>admin</role-name>
             <role-name>user</role-name>
+            <role-name>logging</role-name>
         </auth-constraint>
     </security-constraint>
 
