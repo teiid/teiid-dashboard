@@ -42,7 +42,7 @@ public class TeiidShowcaseBuilder implements Startable {
 	
 	private static final String TEIID_LOGGING_NAME = "TeiidLogging";
 	private static final String JNDI_PATH = "java:/teiid-log-ds";
-	private static final String TEST_QUERY = "SELECT * FROM COMMANDLOG where ID=1";
+	private static final String TEST_QUERY = "select * from commandlog where id=1";
 
 
     @Inject
