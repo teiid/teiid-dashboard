@@ -4,7 +4,7 @@
     <description language="en">AuditLoggingTable</description>
     <sqlprovider>
       <datasource>TeiidLogging</datasource>
-<query>Select * from AuditLog</query>
+<query>Select * from auditlog</query>
     </sqlprovider>
     <dataproperties>
       <dataproperty id="id">
@@ -113,7 +113,7 @@
     <description language="en">Command Logging</description>
     <sqlprovider>
       <datasource>TeiidLogging</datasource>
-<query>Select * from CommandLog</query>
+<query>Select * from commandlog</query>
     </sqlprovider>
     <dataproperties>
       <dataproperty id="id">
