@@ -21,14 +21,14 @@
 	<parent>
     	<groupId>org.jboss.integration-platform</groupId>
     	<artifactId>jboss-integration-platform-parent</artifactId>
-    	<version>6.0.0.CR13</version>	
+    	<version>6.0.0.CR25</version>	
 	</parent>	
     
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jboss.teiid.teiid-dashboard</groupId>
     <artifactId>teiid-dashboard-parent</artifactId>
-    <version>2.1.0</version>
+    <version>3.0.0</version>
     <packaging>pom</packaging>
 
     <name>Dashboard Builder for Teiid Project</name>
@@ -52,12 +52,12 @@
 			resources, i.e. build is platform dependent! -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	
-		<version.org.jboss.integration-platform>6.0.0.CR13</version.org.jboss.integration-platform>
+		<version.org.jboss.integration-platform>6.0.0.CR25</version.org.jboss.integration-platform>
 		<version.org.jboss.teiid>8.9.0.Final</version.org.jboss.teiid>
         
 
         <version.jetty>8.1.7.v20120910</version.jetty>
-        <version.dashbuilder>6.0.3-SNAPSHOT</version.dashbuilder>
+        <version.dashbuilder>6.2.0.Final</version.dashbuilder>
         <version.org.jboss.weld.spi>${version.org.jboss.weld.weld-api}</version.org.jboss.weld.spi>
         <version.org.jboss.weld>${version.org.jboss.weld.weld}</version.org.jboss.weld>
     </properties>
@@ -133,16 +133,27 @@
                 <version>${version.dashbuilder}</version>
                 <classifier>classes</classifier>
             </dependency>
-            <dependency>
+    <dependency>
+      <groupId>org.jboss.weld</groupId>
+      <artifactId>weld-core</artifactId>
+       <version>${version.org.jboss.weld}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.weld.se</groupId>
+      <artifactId>weld-se-core</artifactId>
+      <version>${version.org.jboss.weld}</version>
+    </dependency>            
+            
+            <!--dependency>
                 <groupId>org.jboss.weld</groupId>
                 <artifactId>weld-spi</artifactId>
                 <version>${version.org.jboss.weld.spi}</version>
             </dependency>  
             <dependency>
                 <groupId>org.jboss.weld.servlet</groupId>
-                <artifactId>weld-servlet</artifactId>
+                <artifactId>weld-servlet-core</artifactId>
                 <version>${version.org.jboss.weld}</version>
-            </dependency>  
+            </dependency-->  
 			<dependency>
 				<groupId>org.jboss.teiid.teiid-dashboard</groupId>
 				<artifactId>teiid-dashboard-showcase</artifactId>
