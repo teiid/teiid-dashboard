@@ -319,8 +319,8 @@
       <column>
         <modelproperty>logtime</modelproperty>
         <viewindex>0</viewindex>
-        <name language="en">logtime</name>
-        <hint language="en">logtime</hint>
+        <name language="en">Log Time</name>
+        <hint language="en">Log Time</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
@@ -445,8 +445,8 @@
       <column>
         <modelproperty>vdbname</modelproperty>
         <viewindex>6</viewindex>
-        <name language="en">vdbname</name>
-        <hint language="en">vdbname</hint>
+        <name language="en">VDB Name/name>
+        <hint language="en">VDB Name</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
@@ -456,8 +456,8 @@
       <column>
         <modelproperty>vdbversion</modelproperty>
         <viewindex>7</viewindex>
-        <name language="en">vdbversion</name>
-        <hint language="en">vdbversion</hint>
+        <name language="en">VDB Version</name>
+        <hint language="en">VDB Version</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
@@ -490,8 +490,8 @@
       <column>
         <modelproperty>translatorname</modelproperty>
         <viewindex>9</viewindex>
-        <name language="en">translatorName</name>
-        <hint language="en">translatorName</hint>
+        <name language="en">Translator Name</name>
+        <hint language="en">Translator Name</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
