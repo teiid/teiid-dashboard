@@ -24,8 +24,8 @@ import org.jboss.dashboard.annotation.config.Config;
 import org.jboss.dashboard.database.DataSourceManager;
 import org.jboss.dashboard.database.JNDIDataSourceEntry;
 import org.jboss.dashboard.error.TechnicalError;
-import org.jboss.dashboard.factory.InitialModuleRegistry;
-//import org.jboss.dashboard.initialModule.InitialModuleRegistry;
+//import org.jboss.dashboard.factory.InitialModuleRegistry;
+import org.jboss.dashboard.initialModule.InitialModuleRegistry;
 import org.jboss.dashboard.kpi.KPIInitialModule;
 import org.jboss.dashboard.workspace.export.ImportWorkspacesModule;
 
