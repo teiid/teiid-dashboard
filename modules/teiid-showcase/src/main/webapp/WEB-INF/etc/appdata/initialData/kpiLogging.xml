@@ -319,8 +319,8 @@
       <column>
         <modelproperty>logtime</modelproperty>
         <viewindex>0</viewindex>
-        <name language="en">Time Logged</name>
-        <hint language="en">Time Logged</hint>
+        <name language="en">Log Time</name>
+        <hint language="en">Log Time</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
@@ -425,7 +425,7 @@
         <name language="fr">executionid</name>
         <name language="zh">executionid</name>
         <name language="ja">executionid</name>
-        <name language="en">Execution Id</name>
+        <name language="en">ExecutionId</name>
         <name language="es">executionid</name>
         <name language="de">executionid</name>
         <name language="pt">executionid</name>
@@ -445,7 +445,7 @@
       <column>
         <modelproperty>vdbname</modelproperty>
         <viewindex>6</viewindex>
-        <name language="en">VDB Name</name>
+        <name language="en">VDB Name/name>
         <hint language="en">VDB Name</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
@@ -504,14 +504,14 @@
         <name language="fr">applicationname</name>
         <name language="zh">applicationname</name>
         <name language="ja">applicationname</name>
-        <name language="en">Application Name</name>
+        <name language="en">ApplicationName</name>
         <name language="es">applicationname</name>
         <name language="de">applicationname</name>
         <name language="pt">applicationname</name>
         <hint language="fr">applicationname</hint>
         <hint language="zh">applicationname</hint>
         <hint language="ja">applicationname</hint>
-        <hint language="en">Application Name</hint>
+        <hint language="en">ApplicationName</hint>
         <hint language="es">applicationname</hint>
         <hint language="de">applicationname</hint>
         <hint language="pt">applicationname</hint>
@@ -570,8 +570,8 @@
       <column>
         <modelproperty>sourcerequestid</modelproperty>
         <viewindex>13</viewindex>
-        <name language="en">Source Request ID</name>
-        <hint language="en">Source Request ID</hint>
+        <name language="en">sourcerequestid</name>
+        <hint language="en">sourcerequestid</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
@@ -581,8 +581,8 @@
       <column>
         <modelproperty>eventtype</modelproperty>
         <viewindex>14</viewindex>
-        <name language="en">Event Type</name>
-        <hint language="en">Event Type</hint>
+        <name language="en">eventtype</name>
+        <hint language="en">eventtype</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
@@ -651,14 +651,14 @@
         <name language="fr">sessionid</name>
         <name language="zh">sessionid</name>
         <name language="ja">sessionid</name>
-        <name language="en">Session ID</name>
+        <name language="en">SessionID</name>
         <name language="es">sessionid</name>
         <name language="de">sessionid</name>
         <name language="pt">sessionid</name>
         <hint language="fr">sessionid</hint>
         <hint language="zh">sessionid</hint>
         <hint language="ja">sessionid</hint>
-        <hint language="en">Session ID</hint>
+        <hint language="en">SessionID</hint>
         <hint language="es">sessionid</hint>
         <hint language="de">sessionid</hint>
         <hint language="pt">sessionid</hint>
@@ -675,14 +675,14 @@
         <name language="fr">requestid</name>
         <name language="zh">requestid</name>
         <name language="ja">requestid</name>
-        <name language="en">Request ID</name>
+        <name language="en">RequestId</name>
         <name language="es">requestid</name>
         <name language="de">requestid</name>
         <name language="pt">requestid</name>
         <hint language="fr">requestid</hint>
         <hint language="zh">requestid</hint>
         <hint language="ja">requestid</hint>
-        <hint language="en">Request ID</hint>
+        <hint language="en">RequestId</hint>
         <hint language="es">requestid</hint>
         <hint language="de">requestid</hint>
         <hint language="pt">requestid</hint>

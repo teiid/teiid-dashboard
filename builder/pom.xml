@@ -60,7 +60,7 @@
         <dependency>
             <groupId>org.jboss.weld.servlet</groupId>
             <artifactId>weld-servlet-core</artifactId>
-        </dependency>        
+        </dependency>       
     </dependencies>
 
     <build>
