@@ -21,11 +21,7 @@
 	<parent>
     	<groupId>org.jboss.integration-platform</groupId>
     	<artifactId>jboss-integration-platform-parent</artifactId>
-<<<<<<< HEAD
     	<version>6.0.0.CR26</version>	
-=======
-    	<version>6.0.0.CR25</version>	
->>>>>>> 0587ae44315c9da8095b6901c9ea051699e27ce8
 	</parent>	
     
     <modelVersion>4.0.0</modelVersion>
