@@ -133,27 +133,16 @@
                 <version>${version.dashbuilder}</version>
                 <classifier>classes</classifier>
             </dependency>
-    <dependency>
-      <groupId>org.jboss.weld</groupId>
-      <artifactId>weld-core</artifactId>
-       <version>${version.org.jboss.weld}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.weld.se</groupId>
-      <artifactId>weld-se-core</artifactId>
-      <version>${version.org.jboss.weld}</version>
-    </dependency>            
-            
-            <!--dependency>
-                <groupId>org.jboss.weld</groupId>
-                <artifactId>weld-spi</artifactId>
-                <version>${version.org.jboss.weld.spi}</version>
-            </dependency>  
-            <dependency>
-                <groupId>org.jboss.weld.servlet</groupId>
-                <artifactId>weld-servlet-core</artifactId>
-                <version>${version.org.jboss.weld}</version>
-            </dependency-->  
+			<dependency>
+			  <groupId>org.jboss.weld</groupId>
+			  <artifactId>weld-core</artifactId>
+			   <version>${version.org.jboss.weld}</version>
+			</dependency>
+			<dependency>
+			  <groupId>org.jboss.weld.se</groupId>
+			  <artifactId>weld-se-core</artifactId>
+			  <version>${version.org.jboss.weld}</version>
+			</dependency>            
 			<dependency>
 				<groupId>org.jboss.teiid.teiid-dashboard</groupId>
 				<artifactId>teiid-dashboard-showcase</artifactId>
