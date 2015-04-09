@@ -4,7 +4,8 @@
     <description language="en">AuditLoggingTable</description>
     <sqlprovider>
       <datasource>TeiidLogging</datasource>
-<query>Select * from auditlog</query>
+      <query type="default">Select * from auditlog</query>
+      <query type="h2">Select * from auditlog</query>
     </sqlprovider>
     <dataproperties>
       <dataproperty id="id">
@@ -299,6 +300,255 @@
       </dataproperty>
     </dataproperties>
   </dataprovider>
+  <kpi code="kpi_16671401722531063">
+    <description language="de">- Neue Kennziffer -</description>
+    <description language="zh">- &#26032;&#24314;&#25351;&#26631; -</description>
+    <description language="pt">- Novo indicador -</description>
+    <description language="fr">- Nouvel indicateur -</description>
+    <description language="en">Audit Logging Contents</description>
+    <description language="es">- Nuevo indicador - </description>
+    <description language="ja">- &#26032;&#12375;&#12356;&#25351;&#27161; -</description>
+    <provider code="dataprovider_84341401722402006" />
+    <displayer type="table" renderer="default">
+      <rowsperpage>20</rowsperpage>
+      <headerposition>top</headerposition>
+      <htmlstyle>border: 1px solid #000000; padding:0; text-align:center;</htmlstyle>
+      <htmlclass>skn-table_border</htmlclass>
+      <rowevenclass>skn-even_row</rowevenclass>
+      <rowoddclass>skn-odd_row</rowoddclass>
+      <rowhoverclass>skn-even_row_alt</rowhoverclass>
+      <column>
+        <modelproperty>sessionid</modelproperty>
+        <viewindex>0</viewindex>
+        <name language="fr">sessionid</name>
+        <name language="zh">sessionid</name>
+        <name language="ja">sessionid</name>
+        <name language="en">Session ID</name>
+        <name language="es">sessionid</name>
+        <name language="de">sessionid</name>
+        <name language="pt">sessionid</name>
+        <hint language="fr">sessionid</hint>
+        <hint language="zh">sessionid</hint>
+        <hint language="ja">sessionid</hint>
+        <hint language="en">Session ID</hint>
+        <hint language="es">sessionid</hint>
+        <hint language="de">sessionid</hint>
+        <hint language="pt">sessionid</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>requestid</modelproperty>
+        <viewindex>1</viewindex>
+        <name language="fr">requestid</name>
+        <name language="zh">requestid</name>
+        <name language="ja">requestid</name>
+        <name language="en">Request ID</name>
+        <name language="es">requestid</name>
+        <name language="de">requestid</name>
+        <name language="pt">requestid</name>
+        <hint language="fr">requestid</hint>
+        <hint language="zh">requestid</hint>
+        <hint language="ja">requestid</hint>
+        <hint language="en">Request ID</hint>
+        <hint language="es">requestid</hint>
+        <hint language="de">requestid</hint>
+        <hint language="pt">requestid</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>id</modelproperty>
+        <viewindex>2</viewindex>
+        <name language="fr">id</name>
+        <name language="zh">id</name>
+        <name language="ja">id</name>
+        <name language="en">ID</name>
+        <name language="es">id</name>
+        <name language="de">id</name>
+        <name language="pt">id</name>
+        <hint language="fr">id</hint>
+        <hint language="zh">id</hint>
+        <hint language="ja">id</hint>
+        <hint language="en">ID</hint>
+        <hint language="es">id</hint>
+        <hint language="de">id</hint>
+        <hint language="pt">id</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>principal</modelproperty>
+        <viewindex>3</viewindex>
+        <name language="fr">principal</name>
+        <name language="zh">principal</name>
+        <name language="ja">principal</name>
+        <name language="en">Principal</name>
+        <name language="es">principal</name>
+        <name language="de">principal</name>
+        <name language="pt">principal</name>
+        <hint language="fr">principal</hint>
+        <hint language="zh">principal</hint>
+        <hint language="ja">principal</hint>
+        <hint language="en">Principal</hint>
+        <hint language="es">principal</hint>
+        <hint language="de">principal</hint>
+        <hint language="pt">principal</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>vdbname</modelproperty>
+        <viewindex>4</viewindex>
+        <name language="fr">vdbname</name>
+        <name language="zh">vdbname</name>
+        <name language="ja">vdbname</name>
+        <name language="en">VDB Name</name>
+        <name language="es">vdbname</name>
+        <name language="de">vdbname</name>
+        <name language="pt">vdbname</name>
+        <hint language="fr">vdbname</hint>
+        <hint language="zh">vdbname</hint>
+        <hint language="ja">vdbname</hint>
+        <hint language="en">VDB Name</hint>
+        <hint language="es">vdbname</hint>
+        <hint language="de">vdbname</hint>
+        <hint language="pt">vdbname</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>vdbversion</modelproperty>
+        <viewindex>5</viewindex>
+        <name language="fr">vdbversion</name>
+        <name language="zh">vdbversion</name>
+        <name language="ja">vdbversion</name>
+        <name language="en">VDB Version</name>
+        <name language="es">vdbversion</name>
+        <name language="de">vdbversion</name>
+        <name language="pt">vdbversion</name>
+        <hint language="fr">vdbversion</hint>
+        <hint language="zh">vdbversion</hint>
+        <hint language="ja">vdbversion</hint>
+        <hint language="en">VDB Version</hint>
+        <hint language="es">vdbversion</hint>
+        <hint language="de">vdbversion</hint>
+        <hint language="pt">vdbversion</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>activity</modelproperty>
+        <viewindex>6</viewindex>
+        <name language="fr">activity</name>
+        <name language="zh">activity</name>
+        <name language="ja">activity</name>
+        <name language="en">Activity</name>
+        <name language="es">activity</name>
+        <name language="de">activity</name>
+        <name language="pt">activity</name>
+        <hint language="fr">activity</hint>
+        <hint language="zh">activity</hint>
+        <hint language="ja">activity</hint>
+        <hint language="en">Activity</hint>
+        <hint language="es">activity</hint>
+        <hint language="de">activity</hint>
+        <hint language="pt">activity</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>context</modelproperty>
+        <viewindex>7</viewindex>
+        <name language="fr">context</name>
+        <name language="zh">context</name>
+        <name language="ja">context</name>
+        <name language="en">Context</name>
+        <name language="es">context</name>
+        <name language="de">context</name>
+        <name language="pt">context</name>
+        <hint language="fr">context</hint>
+        <hint language="zh">context</hint>
+        <hint language="ja">context</hint>
+        <hint language="en">Context</hint>
+        <hint language="es">context</hint>
+        <hint language="de">context</hint>
+        <hint language="pt">context</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>resources</modelproperty>
+        <viewindex>8</viewindex>
+        <name language="fr">resources</name>
+        <name language="zh">resources</name>
+        <name language="ja">resources</name>
+        <name language="en">Resources</name>
+        <name language="es">resources</name>
+        <name language="de">resources</name>
+        <name language="pt">resources</name>
+        <hint language="fr">resources</hint>
+        <hint language="zh">resources</hint>
+        <hint language="ja">resources</hint>
+        <hint language="en">Resources</hint>
+        <hint language="es">resources</hint>
+        <hint language="de">resources</hint>
+        <hint language="pt">resources</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>applicationname</modelproperty>
+        <viewindex>9</viewindex>
+        <name language="fr">applicationname</name>
+        <name language="zh">applicationname</name>
+        <name language="ja">applicationname</name>
+        <name language="en">Application Name</name>
+        <name language="es">applicationname</name>
+        <name language="de">applicationname</name>
+        <name language="pt">applicationname</name>
+        <hint language="fr">applicationname</hint>
+        <hint language="zh">applicationname</hint>
+        <hint language="ja">applicationname</hint>
+        <hint language="en">Application Name</hint>
+        <hint language="es">applicationname</hint>
+        <hint language="de">applicationname</hint>
+        <hint language="pt">applicationname</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+    </displayer>
+  </kpi>
   <kpi code="kpi_16821401722967869">
     <description language="de">- Neue Kennziffer -</description>
     <description language="zh">- &#26032;&#24314;&#25351;&#26631; -</description>
@@ -611,278 +861,6 @@
         <htmlvalue>{value}</htmlvalue>
         <selectable>false</selectable>
         <sortable>true</sortable>
-      </column>
-    </displayer>
-  </kpi>
-  <kpi code="kpi_16671401722531063">
-    <description language="de">- Neue Kennziffer -</description>
-    <description language="zh">- &#26032;&#24314;&#25351;&#26631; -</description>
-    <description language="pt">- Novo indicador -</description>
-    <description language="fr">- Nouvel indicateur -</description>
-    <description language="en">Logging Contents</description>
-    <description language="es">- Nuevo indicador - </description>
-    <description language="ja">- &#26032;&#12375;&#12356;&#25351;&#27161; -</description>
-    <provider code="dataprovider_84341401722402006" />
-    <displayer type="table" renderer="default">
-      <rowsperpage>20</rowsperpage>
-      <headerposition>top</headerposition>
-      <htmlstyle>border: 1px solid #000000; padding:0; text-align:center;</htmlstyle>
-      <htmlclass>skn-table_border</htmlclass>
-      <rowevenclass>skn-even_row</rowevenclass>
-      <rowoddclass>skn-odd_row</rowoddclass>
-      <rowhoverclass>skn-even_row_alt</rowhoverclass>
-      <groupby>
-        <propertyid>id</propertyid>
-        <name language="fr">id</name>
-        <name language="zh">id</name>
-        <name language="ja">id</name>
-        <name language="en">ID</name>
-        <name language="es">id</name>
-        <name language="de">id</name>
-        <name language="pt">id</name>
-        <maxnumberofintervals>10</maxnumberofintervals>
-        <taminterval>-1</taminterval>
-        <showtotals>true</showtotals>
-        <totalshtmlstyle>text-align:center; background-color:#DEE5EC; height:20px; font-weight:Bold;</totalshtmlstyle>
-      </groupby>
-      <column>
-        <modelproperty>sessionid</modelproperty>
-        <viewindex>0</viewindex>
-        <name language="fr">sessionid</name>
-        <name language="zh">sessionid</name>
-        <name language="ja">sessionid</name>
-        <name language="en">Session ID</name>
-        <name language="es">sessionid</name>
-        <name language="de">sessionid</name>
-        <name language="pt">sessionid</name>
-        <hint language="fr">sessionid</hint>
-        <hint language="zh">sessionid</hint>
-        <hint language="ja">sessionid</hint>
-        <hint language="en">Session ID</hint>
-        <hint language="es">sessionid</hint>
-        <hint language="de">sessionid</hint>
-        <hint language="pt">sessionid</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-        <groupbyfunction>count</groupbyfunction>
-      </column>
-      <column>
-        <modelproperty>requestid</modelproperty>
-        <viewindex>1</viewindex>
-        <name language="fr">requestid</name>
-        <name language="zh">requestid</name>
-        <name language="ja">requestid</name>
-        <name language="en">Request ID</name>
-        <name language="es">requestid</name>
-        <name language="de">requestid</name>
-        <name language="pt">requestid</name>
-        <hint language="fr">requestid</hint>
-        <hint language="zh">requestid</hint>
-        <hint language="ja">requestid</hint>
-        <hint language="en">Request ID</hint>
-        <hint language="es">requestid</hint>
-        <hint language="de">requestid</hint>
-        <hint language="pt">requestid</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-        <groupbyfunction>count</groupbyfunction>
-      </column>
-      <column>
-        <modelproperty>id</modelproperty>
-        <viewindex>2</viewindex>
-        <name language="fr">id</name>
-        <name language="zh">id</name>
-        <name language="ja">id</name>
-        <name language="en">ID</name>
-        <name language="es">id</name>
-        <name language="de">id</name>
-        <name language="pt">id</name>
-        <hint language="fr">id</hint>
-        <hint language="zh">id</hint>
-        <hint language="ja">id</hint>
-        <hint language="en">ID</hint>
-        <hint language="es">id</hint>
-        <hint language="de">id</hint>
-        <hint language="pt">id</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-      </column>
-      <column>
-        <modelproperty>principal</modelproperty>
-        <viewindex>3</viewindex>
-        <name language="fr">principal</name>
-        <name language="zh">principal</name>
-        <name language="ja">principal</name>
-        <name language="en">Principal</name>
-        <name language="es">principal</name>
-        <name language="de">principal</name>
-        <name language="pt">principal</name>
-        <hint language="fr">principal</hint>
-        <hint language="zh">principal</hint>
-        <hint language="ja">principal</hint>
-        <hint language="en">Principal</hint>
-        <hint language="es">principal</hint>
-        <hint language="de">principal</hint>
-        <hint language="pt">principal</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-        <groupbyfunction>count</groupbyfunction>
-      </column>
-      <column>
-        <modelproperty>vdbname</modelproperty>
-        <viewindex>4</viewindex>
-        <name language="fr">vdbname</name>
-        <name language="zh">vdbname</name>
-        <name language="ja">vdbname</name>
-        <name language="en">VDB Name</name>
-        <name language="es">vdbname</name>
-        <name language="de">vdbname</name>
-        <name language="pt">vdbname</name>
-        <hint language="fr">vdbname</hint>
-        <hint language="zh">vdbname</hint>
-        <hint language="ja">vdbname</hint>
-        <hint language="en">VDB Name</hint>
-        <hint language="es">vdbname</hint>
-        <hint language="de">vdbname</hint>
-        <hint language="pt">vdbname</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-        <groupbyfunction>count</groupbyfunction>
-      </column>
-      <column>
-        <modelproperty>vdbversion</modelproperty>
-        <viewindex>5</viewindex>
-        <name language="fr">vdbversion</name>
-        <name language="zh">vdbversion</name>
-        <name language="ja">vdbversion</name>
-        <name language="en">VDB Version</name>
-        <name language="es">vdbversion</name>
-        <name language="de">vdbversion</name>
-        <name language="pt">vdbversion</name>
-        <hint language="fr">vdbversion</hint>
-        <hint language="zh">vdbversion</hint>
-        <hint language="ja">vdbversion</hint>
-        <hint language="en">VDB Version</hint>
-        <hint language="es">vdbversion</hint>
-        <hint language="de">vdbversion</hint>
-        <hint language="pt">vdbversion</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-        <groupbyfunction>count</groupbyfunction>
-      </column>
-      <column>
-        <modelproperty>activity</modelproperty>
-        <viewindex>6</viewindex>
-        <name language="fr">activity</name>
-        <name language="zh">activity</name>
-        <name language="ja">activity</name>
-        <name language="en">Activity</name>
-        <name language="es">activity</name>
-        <name language="de">activity</name>
-        <name language="pt">activity</name>
-        <hint language="fr">activity</hint>
-        <hint language="zh">activity</hint>
-        <hint language="ja">activity</hint>
-        <hint language="en">Activity</hint>
-        <hint language="es">activity</hint>
-        <hint language="de">activity</hint>
-        <hint language="pt">activity</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-        <groupbyfunction>count</groupbyfunction>
-      </column>
-      <column>
-        <modelproperty>context</modelproperty>
-        <viewindex>7</viewindex>
-        <name language="fr">context</name>
-        <name language="zh">context</name>
-        <name language="ja">context</name>
-        <name language="en">Context</name>
-        <name language="es">context</name>
-        <name language="de">context</name>
-        <name language="pt">context</name>
-        <hint language="fr">context</hint>
-        <hint language="zh">context</hint>
-        <hint language="ja">context</hint>
-        <hint language="en">Context</hint>
-        <hint language="es">context</hint>
-        <hint language="de">context</hint>
-        <hint language="pt">context</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-        <groupbyfunction>count</groupbyfunction>
-      </column>
-      <column>
-        <modelproperty>resources</modelproperty>
-        <viewindex>8</viewindex>
-        <name language="fr">resources</name>
-        <name language="zh">resources</name>
-        <name language="ja">resources</name>
-        <name language="en">Resources</name>
-        <name language="es">resources</name>
-        <name language="de">resources</name>
-        <name language="pt">resources</name>
-        <hint language="fr">resources</hint>
-        <hint language="zh">resources</hint>
-        <hint language="ja">resources</hint>
-        <hint language="en">Resources</hint>
-        <hint language="es">resources</hint>
-        <hint language="de">resources</hint>
-        <hint language="pt">resources</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-        <groupbyfunction>count</groupbyfunction>
-      </column>
-      <column>
-        <modelproperty>applicationname</modelproperty>
-        <viewindex>9</viewindex>
-        <name language="fr">applicationname</name>
-        <name language="zh">applicationname</name>
-        <name language="ja">applicationname</name>
-        <name language="en">Application Name</name>
-        <name language="es">applicationname</name>
-        <name language="de">applicationname</name>
-        <name language="pt">applicationname</name>
-        <hint language="fr">applicationname</hint>
-        <hint language="zh">applicationname</hint>
-        <hint language="ja">applicationname</hint>
-        <hint language="en">Application Name</hint>
-        <hint language="es">applicationname</hint>
-        <hint language="de">applicationname</hint>
-        <hint language="pt">applicationname</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-        <groupbyfunction>count</groupbyfunction>
       </column>
     </displayer>
   </kpi>
