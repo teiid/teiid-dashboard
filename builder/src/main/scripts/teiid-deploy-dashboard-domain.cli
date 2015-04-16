@@ -1,0 +1,2 @@
+/deployment=teiid-dashboard-builder.war:add(content=[{path=dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war/,archive=false,relative-to=jboss.home.dir}],runtime-name=teiid-dashboard-builder.war)
+/server-group=main-server-group/deployment=teiid-dashboard-builder.war:add(enabled=true)
