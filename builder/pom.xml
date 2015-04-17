@@ -101,7 +101,12 @@
                         <goals>
                             <goal>single</goal>
                         </goals>
-									
+		                <configuration>
+		                	<!--finalName>teiid-dashboard-builder</finalName-->
+		                    <descriptors>
+		                        <descriptor>src/main/assembly/dashboard-builder-dist.xml</descriptor>
+		                    </descriptors>
+		                </configuration>                        									
                     </execution>   
                  
                 </executions>
