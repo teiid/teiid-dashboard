@@ -188,15 +188,15 @@
         <name language="de">requestid</name>
         <name language="pt">requestid</name>
       </dataproperty>
-      <dataproperty id="rowcount">
+      <dataproperty id="row_count">
         <domain>org.jboss.dashboard.domain.numeric.NumericDomain</domain>
-        <name language="fr">rowcount</name>
-        <name language="zh">rowcount</name>
-        <name language="ja">rowcount</name>
+        <name language="fr">row_count</name>
+        <name language="zh">row_count</name>
+        <name language="ja">row_count</name>
         <name language="en">Row Count</name>
-        <name language="es">rowcount</name>
-        <name language="de">rowcount</name>
-        <name language="pt">rowcount</name>
+        <name language="es">row_count</name>
+        <name language="de">row_count</name>
+        <name language="pt">row_count</name>
       </dataproperty>
       <dataproperty id="sessionid">
         <domain>org.jboss.dashboard.domain.label.LabelDomain</domain>
@@ -549,14 +549,8 @@
       </column>
     </displayer>
   </kpi>
-  <kpi code="kpi_16821401722967869">
-    <description language="de">- Neue Kennziffer -</description>
-    <description language="zh">- &#26032;&#24314;&#25351;&#26631; -</description>
-    <description language="pt">- Novo indicador -</description>
-    <description language="fr">- Nouvel indicateur -</description>
-    <description language="en">Command Log Contents</description>
-    <description language="es">- Nuevo indicador - </description>
-    <description language="ja">- &#26032;&#12375;&#12356;&#25351;&#27161; -</description>
+  <kpi code="kpi_18271429457005738">
+    <description language="en">CommandLogginKPI</description>
     <provider code="dataprovider_10951401722888067" />
     <displayer type="table" renderer="default">
       <rowsperpage>20</rowsperpage>
@@ -569,10 +563,10 @@
       <column>
         <modelproperty>logtime</modelproperty>
         <viewindex>0</viewindex>
-        <name language="en">Time Logged</name>
-        <hint language="en">Time Logged</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <name language="en">Log Time</name>
+        <hint language="en">Log Time</hint>
+        <headerhtmlstyle>text-align:center; width:130px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:130px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
         <selectable>false</selectable>
         <sortable>true</sortable>
@@ -580,20 +574,8 @@
       <column>
         <modelproperty>sessionid</modelproperty>
         <viewindex>1</viewindex>
-        <name language="fr">sessionid</name>
-        <name language="zh">sessionid</name>
-        <name language="ja">sessionid</name>
         <name language="en">Session ID</name>
-        <name language="es">sessionid</name>
-        <name language="de">sessionid</name>
-        <name language="pt">sessionid</name>
-        <hint language="fr">sessionid</hint>
-        <hint language="zh">sessionid</hint>
-        <hint language="ja">sessionid</hint>
         <hint language="en">Session ID</hint>
-        <hint language="es">sessionid</hint>
-        <hint language="de">sessionid</hint>
-        <hint language="pt">sessionid</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
@@ -603,22 +585,10 @@
       <column>
         <modelproperty>requestid</modelproperty>
         <viewindex>2</viewindex>
-        <name language="fr">requestid</name>
-        <name language="zh">requestid</name>
-        <name language="ja">requestid</name>
         <name language="en">Request ID</name>
-        <name language="es">requestid</name>
-        <name language="de">requestid</name>
-        <name language="pt">requestid</name>
-        <hint language="fr">requestid</hint>
-        <hint language="zh">requestid</hint>
-        <hint language="ja">requestid</hint>
         <hint language="en">Request ID</hint>
-        <hint language="es">requestid</hint>
-        <hint language="de">requestid</hint>
-        <hint language="pt">requestid</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <headerhtmlstyle>text-align:center; width:120px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:120px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
         <selectable>false</selectable>
         <sortable>true</sortable>
@@ -647,35 +617,68 @@
         <sortable>true</sortable>
       </column>
       <column>
-        <modelproperty>principal</modelproperty>
+        <modelproperty>row_count</modelproperty>
         <viewindex>4</viewindex>
-        <name language="fr">principal</name>
-        <name language="zh">principal</name>
-        <name language="ja">principal</name>
-        <name language="en">Principal</name>
-        <name language="es">principal</name>
-        <name language="de">principal</name>
-        <name language="pt">principal</name>
-        <hint language="fr">principal</hint>
-        <hint language="zh">principal</hint>
-        <hint language="ja">principal</hint>
-        <hint language="en">Principal</hint>
-        <hint language="es">principal</hint>
-        <hint language="de">principal</hint>
-        <hint language="pt">principal</hint>
+        <name language="en">Row Count</name>
+        <hint language="en">Row Count</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
-        <selectable>true</selectable>
+        <selectable>false</selectable>
         <sortable>true</sortable>
       </column>
       <column>
-        <modelproperty>executionid</modelproperty>
+        <modelproperty>sourcecommand</modelproperty>
         <viewindex>5</viewindex>
+        <name language="fr">sourcecommand</name>
+        <name language="zh">sourcecommand</name>
+        <name language="ja">sourcecommand</name>
+        <name language="en">Source Command</name>
+        <name language="es">sourcecommand</name>
+        <name language="de">sourcecommand</name>
+        <name language="pt">sourcecommand</name>
+        <hint language="fr">sourcecommand</hint>
+        <hint language="zh">sourcecommand</hint>
+        <hint language="ja">sourcecommand</hint>
+        <hint language="en">Source Command</hint>
+        <hint language="es">sourcecommand</hint>
+        <hint language="de">sourcecommand</hint>
+        <hint language="pt">sourcecommand</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>eventtype</modelproperty>
+        <viewindex>6</viewindex>
+        <name language="en">Event Type</name>
+        <hint language="en">Event Type</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>sqlcmd</modelproperty>
+        <viewindex>7</viewindex>
+        <name language="en">SQL Command</name>
+        <hint language="en">SQL Command</hint>
+        <headerhtmlstyle>text-align:center; width:300px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:300px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>false</sortable>
+      </column>
+      <column>
+        <modelproperty>executionid</modelproperty>
+        <viewindex>8</viewindex>
         <name language="fr">executionid</name>
         <name language="zh">executionid</name>
         <name language="ja">executionid</name>
-        <name language="en">Execution Id</name>
+        <name language="en">ExecutionId</name>
         <name language="es">executionid</name>
         <name language="de">executionid</name>
         <name language="pt">executionid</name>
@@ -693,8 +696,30 @@
         <sortable>true</sortable>
       </column>
       <column>
+        <modelproperty>sourcerequestid</modelproperty>
+        <viewindex>9</viewindex>
+        <name language="en">Source Request ID</name>
+        <hint language="en">Source Request ID</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
+        <modelproperty>transactionid</modelproperty>
+        <viewindex>10</viewindex>
+        <name language="en">Transaction ID</name>
+        <hint language="en">Transaction ID</hint>
+        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <htmlvalue>{value}</htmlvalue>
+        <selectable>false</selectable>
+        <sortable>true</sortable>
+      </column>
+      <column>
         <modelproperty>vdbname</modelproperty>
-        <viewindex>6</viewindex>
+        <viewindex>11</viewindex>
         <name language="en">VDB Name</name>
         <hint language="en">VDB Name</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
@@ -705,7 +730,7 @@
       </column>
       <column>
         <modelproperty>vdbversion</modelproperty>
-        <viewindex>7</viewindex>
+        <viewindex>12</viewindex>
         <name language="en">VDB Version</name>
         <hint language="en">VDB Version</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
@@ -716,7 +741,7 @@
       </column>
       <column>
         <modelproperty>modelname</modelproperty>
-        <viewindex>8</viewindex>
+        <viewindex>13</viewindex>
         <name language="fr">modelname</name>
         <name language="zh">modelname</name>
         <name language="ja">modelname</name>
@@ -734,12 +759,12 @@
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
-        <selectable>true</selectable>
+        <selectable>false</selectable>
         <sortable>true</sortable>
       </column>
       <column>
         <modelproperty>translatorname</modelproperty>
-        <viewindex>9</viewindex>
+        <viewindex>14</viewindex>
         <name language="en">Translator Name</name>
         <hint language="en">Translator Name</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
@@ -750,112 +775,67 @@
       </column>
       <column>
         <modelproperty>applicationname</modelproperty>
-        <viewindex>10</viewindex>
+        <viewindex>15</viewindex>
         <name language="fr">applicationname</name>
         <name language="zh">applicationname</name>
         <name language="ja">applicationname</name>
-        <name language="en">Application Name</name>
+        <name language="en">ApplicationName</name>
         <name language="es">applicationname</name>
         <name language="de">applicationname</name>
         <name language="pt">applicationname</name>
         <hint language="fr">applicationname</hint>
         <hint language="zh">applicationname</hint>
         <hint language="ja">applicationname</hint>
-        <hint language="en">Application Name</hint>
+        <hint language="en">ApplicationName</hint>
         <hint language="es">applicationname</hint>
         <hint language="de">applicationname</hint>
         <hint language="pt">applicationname</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
-        <selectable>true</selectable>
+        <selectable>false</selectable>
         <sortable>true</sortable>
       </column>
       <column>
-        <modelproperty>rowcount</modelproperty>
-        <viewindex>11</viewindex>
-        <name language="fr">rowcount</name>
-        <name language="zh">rowcount</name>
-        <name language="ja">rowcount</name>
-        <name language="en">Row Count</name>
-        <name language="es">rowcount</name>
-        <name language="de">rowcount</name>
-        <name language="pt">rowcount</name>
-        <hint language="fr">rowcount</hint>
-        <hint language="zh">rowcount</hint>
-        <hint language="ja">rowcount</hint>
-        <hint language="en">Row Count</hint>
-        <hint language="es">rowcount</hint>
-        <hint language="de">rowcount</hint>
-        <hint language="pt">rowcount</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
+        <modelproperty>principal</modelproperty>
+        <viewindex>16</viewindex>
+        <name language="fr">principal</name>
+        <name language="zh">principal</name>
+        <name language="ja">principal</name>
+        <name language="en">Principal</name>
+        <name language="es">principal</name>
+        <name language="de">principal</name>
+        <name language="pt">principal</name>
+        <hint language="fr">principal</hint>
+        <hint language="zh">principal</hint>
+        <hint language="ja">principal</hint>
+        <hint language="en">Principal</hint>
+        <hint language="es">principal</hint>
+        <hint language="de">principal</hint>
+        <hint language="pt">principal</hint>
+        <headerhtmlstyle>text-align:center; width:150px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
+        <cellhtmlstyle>width:150px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
         <selectable>false</selectable>
         <sortable>true</sortable>
       </column>
       <column>
-        <modelproperty>sqlcmd</modelproperty>
-        <viewindex>12</viewindex>
+        <modelproperty>queryplan</modelproperty>
+        <viewindex>17</viewindex>
         <name language="fr">plan</name>
         <name language="zh">plan</name>
         <name language="ja">plan</name>
-        <name language="en">SQL Command</name>
+        <name language="en">Query Plan</name>
         <name language="es">plan</name>
         <name language="de">plan</name>
         <name language="pt">plan</name>
         <hint language="fr">plan</hint>
         <hint language="zh">plan</hint>
         <hint language="ja">plan</hint>
-        <hint language="en">SQL Command</hint>
+        <hint language="en">Query Plan</hint>
         <hint language="es">plan</hint>
         <hint language="de">plan</hint>
         <hint language="pt">plan</hint>
-        <headerhtmlstyle>text-align:center; width:300px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:300px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-      </column>
-      <column>
-        <modelproperty>sourcerequestid</modelproperty>
-        <viewindex>13</viewindex>
-        <name language="en">Source Request ID</name>
-        <hint language="en">Source Request ID</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-      </column>
-      <column>
-        <modelproperty>eventtype</modelproperty>
-        <viewindex>14</viewindex>
-        <name language="en">Event Type</name>
-        <hint language="en">Event Type</hint>
-        <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
-        <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
-        <htmlvalue>{value}</htmlvalue>
-        <selectable>false</selectable>
-        <sortable>true</sortable>
-      </column>
-      <column>
-        <modelproperty>sourcecommand</modelproperty>
-        <viewindex>15</viewindex>
-        <name language="fr">sourcecommand</name>
-        <name language="zh">sourcecommand</name>
-        <name language="ja">sourcecommand</name>
-        <name language="en">Source Command</name>
-        <name language="es">sourcecommand</name>
-        <name language="de">sourcecommand</name>
-        <name language="pt">sourcecommand</name>
-        <hint language="fr">sourcecommand</hint>
-        <hint language="zh">sourcecommand</hint>
-        <hint language="ja">sourcecommand</hint>
-        <hint language="en">Source Command</hint>
-        <hint language="es">sourcecommand</hint>
-        <hint language="de">sourcecommand</hint>
-        <hint language="pt">sourcecommand</hint>
         <headerhtmlstyle>text-align:center; width:100px; overflow:hidden; background-color:#C6D8EB; height:20px; color:#465F7D; font-weight:Bold;  white-space:nowrap;</headerhtmlstyle>
         <cellhtmlstyle>width:100px; height:20px;  white-space:nowrap;</cellhtmlstyle>
         <htmlvalue>{value}</htmlvalue>
