@@ -1,0 +1,33 @@
+<!--This script builds a zip for Teiid Server Installation -->
+<assembly>
+  
+  <id>dist</id>
+  
+  <formats>
+    <format>zip</format>
+  </formats>
+  
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <baseDirectory>.</baseDirectory>
+
+  <fileSets>
+          
+    <fileSet>
+        <directory>target/teiid-dashboard-builder-war</directory>
+        <outputDirectory>dataVirtualization/teiid-dashboard/teiid-dashboard-builder.war</outputDirectory>      
+        <!--includes>
+          <include>*.*</include>
+        </includes-->   
+    </fileSet> 
+
+    <fileSet>
+        <directory>src/main/scripts</directory>
+        <outputDirectory>/cli-scripts</outputDirectory>      
+        <includes>
+          <include>*.cli</include>
+        </includes>      
+    </fileSet>  
+                    
+  </fileSets>
+    
+</assembly>

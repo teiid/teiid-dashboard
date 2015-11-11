@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.jboss.teiid.teiid-dashboard</groupId>
         <artifactId>teiid-dashboard-parent</artifactId>
-        <version>3.0.0</version>
+        <version>3.1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -70,48 +70,15 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
 
-                    <execution>
-                        <id>cli</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <finalName>teiid-dashbuilder</finalName>
-                            <descriptors>
-                                <descriptor>src/main/assembly/assembly-cli.xml</descriptor>
-                            </descriptors>
-                            <archive>
-                                <addMavenDescriptor>false</addMavenDescriptor>
-                            </archive>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                    	<id>demos</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-		                <configuration>
-		                    <finalName>teiid-dashbuilder</finalName>
-		                    <descriptors>
-		                        <descriptor>src/main/assembly/assembly-demo.xml</descriptor>
-		                        <descriptor>src/main/assembly/assembly-demo-installer.xml</descriptor>
-		                    </descriptors>
-		                    <archive>
-		                        <addMavenDescriptor>false</addMavenDescriptor>
-		                    </archive>
-		                </configuration>
-                    </execution>
                      <execution>
-                    	<id>jbossas</id>
+                    	<id>jbossas-war</id>
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
                         </goals>
 		                <configuration>
-		                    <finalName>teiid-dashbuilder</finalName>
+		                	<finalName>teiid-dashboard-builder</finalName>
+		                    <!--outputDirectory>target/teiid-dashboard</outputDirectory-->
 		                    <descriptors>
 		                        <descriptor>src/main/assembly/assembly-jboss-as-7.xml</descriptor>
 		                    </descriptors>
@@ -127,10 +94,24 @@
                  			</archive>
 
 		                </configuration>                        
-                    </execution>                   
+                    </execution>   
+                    <execution>
+                    	<id>assembl-kit</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+		                <configuration>
+		                	<!--finalName>teiid-dashboard-builder</finalName-->
+		                    <descriptors>
+		                        <descriptor>src/main/assembly/dashboard-builder-dist.xml</descriptor>
+		                    </descriptors>
+		                </configuration>                        									
+                    </execution>   
+                 
                 </executions>
  
-            </plugin>      
+            </plugin>          
         </plugins>
     </build>
 
