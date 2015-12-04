@@ -62,7 +62,19 @@
 			<artifactId>teiid</artifactId>
 			<classifier>jdbc</classifier>
 			<scope>provided</scope>
-		</dependency>	                                       
+		</dependency>	
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+		</dependency>		                                       
     </dependencies>
 
     <build>
@@ -100,7 +112,7 @@
                             <artifactId>dashboard-webapp</artifactId>
                         </overlay>
                     </overlays>
-
+					<dependentWarExcludes>**/poi-*</dependentWarExcludes>
                 </configuration>
             </plugin>
         </plugins>
