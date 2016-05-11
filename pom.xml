@@ -53,7 +53,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	
 		<version.org.jboss.integration-platform>6.0.0.CR30</version.org.jboss.integration-platform>
-		<version.org.jboss.teiid>8.12.0.Final</version.org.jboss.teiid>
+		<version.org.jboss.teiid>8.12.5</version.org.jboss.teiid>
         
 
         <version.jetty>8.1.7.v20120910</version.jetty>
@@ -83,19 +83,18 @@
             	<type>pom</type>
           </dependency> 		
           <dependency>
-				<groupId>org.jboss.teiid</groupId>
-				<artifactId>teiid-parent</artifactId>
+		<groupId>org.jboss.teiid</groupId>
+		<artifactId>teiid-parent</artifactId>
              	<version>${version.org.jboss.teiid}</version>
              	<type>pom</type>
              	<scope>import</scope>
           </dependency>  
-  			<dependency>
-				<groupId>org.jboss.teiid</groupId>
-				<artifactId>teiid</artifactId>
-				<version>${version.org.jboss.teiid}</version>
-				<classifier>jdbc</classifier>
-			</dependency>	        
-            <dependency>
+  	  <dependency>
+		<groupId>org.jboss.teiid</groupId>
+		<artifactId>teiid-jdbc</artifactId>
+		<version>${version.org.jboss.teiid}</version>
+	  </dependency>	        
+          <dependency>
                 <groupId>org.jboss.teiid</groupId>
                 <artifactId>teiid-client</artifactId>
                 <version>${version.org.jboss.teiid}</version>
@@ -106,12 +105,12 @@
                     </exclusion>
                 </exclusions>
             </dependency> 
-			<dependency>
-				<groupId>org.jboss.dashboard-builder</groupId>
-				<artifactId>dashboard-webapp</artifactId>
-				<version>${version.dashbuilder}</version>
-				<type>war</type>
-			</dependency>              
+                <dependency>
+		        <groupId>org.jboss.dashboard-builder</groupId>
+			<artifactId>dashboard-webapp</artifactId>
+			<version>${version.dashbuilder}</version>
+			<type>war</type>
+		</dependency>              
             <dependency>
                 <groupId>org.jboss.dashboard-builder</groupId>
                 <artifactId>dashboard-commons</artifactId>

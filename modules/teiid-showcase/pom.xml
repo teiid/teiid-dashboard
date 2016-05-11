@@ -59,8 +59,7 @@
 		</dependency> 
 		<dependency>
 			<groupId>org.jboss.teiid</groupId>
-			<artifactId>teiid</artifactId>
-			<classifier>jdbc</classifier>
+			<artifactId>teiid-jdbc</artifactId>
 			<scope>provided</scope>
 		</dependency>	
 		<dependency>
