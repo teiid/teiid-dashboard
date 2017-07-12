@@ -57,7 +57,7 @@
         
 
         <version.jetty>8.1.7.v20120910</version.jetty>
-        <version.dashbuilder>6.3.0.Final</version.dashbuilder>
+        <version.dashbuilder>6.5.0.Final</version.dashbuilder>
         <version.org.jboss.weld.spi>${version.org.jboss.weld.weld-api}</version.org.jboss.weld.spi>
         <version.org.jboss.weld>${version.org.jboss.weld.weld}</version.org.jboss.weld>
     </properties>
