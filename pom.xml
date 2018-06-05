@@ -53,11 +53,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	
 		<version.org.jboss.integration-platform>6.0.0.CR30</version.org.jboss.integration-platform>
-		<version.org.jboss.teiid>8.12.11.6_4</version.org.jboss.teiid>
+		<version.org.jboss.teiid>8.12.13.6_4</version.org.jboss.teiid>
         
 
         <version.jetty>8.1.7.v20120910</version.jetty>
-        <version.dashbuilder>6.5.0.Final</version.dashbuilder>
+        <version.dashbuilder>6.5.0.Final-redhat-7</version.dashbuilder>
         <version.org.jboss.weld.spi>${version.org.jboss.weld.weld-api}</version.org.jboss.weld.spi>
         <version.org.jboss.weld>${version.org.jboss.weld.weld}</version.org.jboss.weld>
     </properties>
@@ -157,45 +157,6 @@
 	</dependencyManagement>
 	
 <profiles>
-
-   <profile>
-	<id>licenses</id>
-	<activation>
-		<activeByDefault>false</activeByDefault>
-	</activation>
-	<build>
-		<plugins>
-		    <plugin>
-			<groupId>org.codehaus.mojo</groupId>
-			<artifactId>license-maven-plugin</artifactId>
-			<version>1.13</version>
-			<executions>
-			  <execution>
-			    <id>download-licenses</id>
-			    <goals>
-			      <goal>download-licenses</goal>
-			    </goals>
-			  </execution>
-			</executions>
-		      </plugin>
-
-		     <plugin>
-			<groupId>org.codehaus.mojo</groupId>
-			<artifactId>license-maven-plugin</artifactId>
-			<version>1.13</version>
-			<executions>
-			  <execution>
-			    <id>aggregate-download-licenses</id>
-			    <goals>
-			      <goal>aggregate-download-licenses</goal>
-			    </goals>
-			  </execution>
-			</executions>
-		      </plugin>
-         	</plugins>
-	</build>
-    </profile>
-
     <profile>
 	<id>fullProfile</id>
 	<activation>
